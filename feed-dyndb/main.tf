@@ -47,7 +47,7 @@ ITEM
   }
 }
 
-resource "aws_dynamodb_table_item" "this1" {
+resource "aws_dynamodb_table_item" "this0" {
   table_name = "${data.aws_dynamodb_table.table.name}"
   hash_key   = "${data.aws_dynamodb_table.table.hash_key}"
   range_key  = "${data.aws_dynamodb_table.table.range_key}"
@@ -58,7 +58,23 @@ resource "aws_dynamodb_table_item" "this1" {
   "Description": {"S": "Surface pressure in hPa/millibars"},
   "Id": {"N": "0"},
   "Name": {"S": "Pressure"},
-  "Precision": {"N": "0"}
+  "Precision": {"N": "1"}
+}
+ITEM
+}
+
+resource "aws_dynamodb_table_item" "this1" {
+  table_name = "${data.aws_dynamodb_table.table.name}"
+  hash_key   = "${data.aws_dynamodb_table.table.hash_key}"
+  range_key  = "${data.aws_dynamodb_table.table.range_key}"
+
+  item = <<ITEM
+{
+  "DataType": {"S": "m"},
+  "Description": {"S": "500hPa height in meters"},
+  "Id": {"N": "1"},
+  "Name": {"S": "HPa500"},
+  "Precision": {"N": "1"}
 }
 ITEM
 }
@@ -70,11 +86,11 @@ resource "aws_dynamodb_table_item" "this2" {
 
   item = <<ITEM
 {
-  "DataType": {"S": "m"},
-  "Description": {"S": "500hPa height in meters"},
-  "Id": {"N": "1"},
-  "Name": {"S": "HPa500"},
-  "Precision": {"N": "0"}
+  "DataType": {"S": "degree, m/s"},
+  "Description": {"S": "Wind speed at 10m with direction relative to North"},
+  "Id": {"N": "2"},
+  "Name": {"S": "Wind10M"},
+  "Precision": {"N": "0.5"}
 }
 ITEM
 }
@@ -87,10 +103,10 @@ resource "aws_dynamodb_table_item" "this3" {
   item = <<ITEM
 {
   "DataType": {"S": "degree, m/s"},
-  "Description": {"S": "Wind speed at 10m with direction relative to North"},
-  "Id": {"N": "2"},
-  "Name": {"S": "Wind10M"},
-  "Precision": {"N": "1"}
+  "Description": {"S": "Wind speed at 50m with direction relative to North"},
+  "Id": {"N": "3"},
+  "Name": {"S": "Wind50M"},
+  "Precision": {"N": "0.5"}
 }
 ITEM
 }
@@ -102,11 +118,11 @@ resource "aws_dynamodb_table_item" "this4" {
 
   item = <<ITEM
 {
-  "DataType": {"S": "degree, m/s"},
-  "Description": {"S": "Wind speed at 50m with direction relative to North"},
-  "Id": {"N": "3"},
-  "Name": {"S": "Wind50M"},
-  "Precision": {"N": "1"}
+  "DataType": {"S": "m/s"},
+  "Description": {"S": "Wind gusts at 10m"},
+  "Id": {"N": "4"},
+  "Name": {"S": "WindGusts10M"},
+  "Precision": {"N": "0.5"}
 }
 ITEM
 }
@@ -119,10 +135,10 @@ resource "aws_dynamodb_table_item" "this5" {
   item = <<ITEM
 {
   "DataType": {"S": "m/s"},
-  "Description": {"S": "Wind gusts at 10m"},
-  "Id": {"N": "4"},
-  "Name": {"S": "WindGusts10M"},
-  "Precision": {"N": "1"}
+  "Description": {"S": "Wind gusts at 50m"},
+  "Id": {"N": "5"},
+  "Name": {"S": "WindGusts50M"},
+  "Precision": {"N": "0.5"}
 }
 ITEM
 }
@@ -135,10 +151,10 @@ resource "aws_dynamodb_table_item" "this6" {
   item = <<ITEM
 {
   "DataType": {"S": "m/s"},
-  "Description": {"S": "Wind gusts at 50m"},
-  "Id": {"N": "5"},
-  "Name": {"S": "WindGusts50M"},
-  "Precision": {"N": "1"}
+  "Description": {"S": "Risk wind speed at 10m"},
+  "Id": {"N": "6"},
+  "Name": {"S": "RiskWindSpeed"},
+  "Precision": {"N": "0.5"}
 }
 ITEM
 }
@@ -150,11 +166,11 @@ resource "aws_dynamodb_table_item" "this7" {
 
   item = <<ITEM
 {
-  "DataType": {"S": "m/s"},
-  "Description": {"S": "Risk wind speed at 10m"},
-  "Id": {"N": "6"},
-  "Name": {"S": "RiskWindSpeed"},
-  "Precision": {"N": "1"}
+  "DataType": {"S": "m"},
+  "Description": {"S": "Risk wave height"},
+  "Id": {"N": "7"},
+  "Name": {"S": "RiskWaveHeight"},
+  "Precision": {"N": "0.1"}
 }
 ITEM
 }
@@ -166,11 +182,11 @@ resource "aws_dynamodb_table_item" "this8" {
 
   item = <<ITEM
 {
-  "DataType": {"S": "m"},
-  "Description": {"S": "Risk wave height"},
-  "Id": {"N": "7"},
-  "Name": {"S": "RiskWaveHeight"},
-  "Precision": {"N": "1"}
+  "DataType": {"S": "degree, m"},
+  "Description": {"S": "Wind-driven wave: direction relative to North and significant wave height"},
+  "Id": {"N": "8"},
+  "Name": {"S": "Wave"},
+  "Precision": {"N": "0.1"}
 }
 ITEM
 }
@@ -182,10 +198,10 @@ resource "aws_dynamodb_table_item" "this9" {
 
   item = <<ITEM
 {
-  "DataType": {"S": "degree, m"},
-  "Description": {"S": "Wind-driven wave: direction relative to North and significant wave height"},
-  "Id": {"N": "8"},
-  "Name": {"S": "Wave"},
+  "DataType": {"S": "s"},
+  "Description": {"S": "Wind-driven wave: mean period"},
+  "Id": {"N": "9"},
+  "Name": {"S": "WavePeriod"},
   "Precision": {"N": "1"}
 }
 ITEM
@@ -198,11 +214,11 @@ resource "aws_dynamodb_table_item" "this10" {
 
   item = <<ITEM
 {
-  "DataType": {"S": "s"},
-  "Description": {"S": "Wind-driven wave: mean period"},
-  "Id": {"N": "9"},
-  "Name": {"S": "WavePeriod"},
-  "Precision": {"N": "0"}
+  "DataType": {"S": "degree, m"},
+  "Description": {"S": "Swell: direction relative to North and significant wave height"},
+  "Id": {"N": "10"},
+  "Name": {"S": "Swell"},
+  "Precision": {"N": "0.1"}
 }
 ITEM
 }
@@ -214,10 +230,10 @@ resource "aws_dynamodb_table_item" "this11" {
 
   item = <<ITEM
 {
-  "DataType": {"S": "degree, m"},
-  "Description": {"S": "Swell: direction relative to North and significant wave height"},
-  "Id": {"N": "10"},
-  "Name": {"S": "Swell"},
+  "DataType": {"S": "s"},
+  "Description": {"S": "Swell: mean period"},
+  "Id": {"N": "11"},
+  "Name": {"S": "SwellPeriod"},
   "Precision": {"N": "1"}
 }
 ITEM
@@ -230,32 +246,16 @@ resource "aws_dynamodb_table_item" "this12" {
 
   item = <<ITEM
 {
-  "DataType": {"S": "s"},
-  "Description": {"S": "Swell: mean period"},
-  "Id": {"N": "11"},
-  "Name": {"S": "SwellPeriod"},
-  "Precision": {"N": "0"}
+  "DataType": {"S": "%"},
+  "Description": {"S": "Risk of precipitation"},
+  "Id": {"N": "12"},
+  "Name": {"S": "Precipitation"},
+  "Precision": {"N": "1"}
 }
 ITEM
 }
 
 resource "aws_dynamodb_table_item" "this13" {
-  table_name = "${data.aws_dynamodb_table.table.name}"
-  hash_key   = "${data.aws_dynamodb_table.table.hash_key}"
-  range_key  = "${data.aws_dynamodb_table.table.range_key}"
-
-  item = <<ITEM
-{
-  "DataType": {"S": "%"},
-  "Description": {"S": "Risk of precipitation"},
-  "Id": {"N": "12"},
-  "Name": {"S": "Precipitation"},
-  "Precision": {"N": "0"}
-}
-ITEM
-}
-
-resource "aws_dynamodb_table_item" "this14" {
   table_name = "${data.aws_dynamodb_table.table.name}"
   hash_key   = "${data.aws_dynamodb_table.table.hash_key}"
   range_key  = "${data.aws_dynamodb_table.table.range_key}"
@@ -271,7 +271,7 @@ resource "aws_dynamodb_table_item" "this14" {
 ITEM
 }
 
-resource "aws_dynamodb_table_item" "this15" {
+resource "aws_dynamodb_table_item" "this14" {
   table_name = "${data.aws_dynamodb_table.table.name}"
   hash_key   = "${data.aws_dynamodb_table.table.hash_key}"
   range_key  = "${data.aws_dynamodb_table.table.range_key}"
@@ -282,7 +282,23 @@ resource "aws_dynamodb_table_item" "this15" {
   "Description": {"S": "Relative humidity in %"},
   "Id": {"N": "14"},
   "Name": {"S": "RelativeHumidity"},
-  "Precision": {"N": "0"}
+  "Precision": {"N": "1"}
+}
+ITEM
+}
+
+resource "aws_dynamodb_table_item" "this15" {
+  table_name = "${data.aws_dynamodb_table.table.name}"
+  hash_key   = "${data.aws_dynamodb_table.table.hash_key}"
+  range_key  = "${data.aws_dynamodb_table.table.range_key}"
+
+  item = <<ITEM
+{
+  "DataType": {"S": "degree"},
+  "Description": {"S": "Air temperature in degrees Celsius"},
+  "Id": {"N": "15"},
+  "Name": {"S": "AirTemperature"},
+  "Precision": {"N": "1"}
 }
 ITEM
 }
@@ -295,10 +311,10 @@ resource "aws_dynamodb_table_item" "this16" {
   item = <<ITEM
 {
   "DataType": {"S": "degree"},
-  "Description": {"S": "Air temperature in degrees Celsius"},
-  "Id": {"N": "15"},
-  "Name": {"S": "AirTemperature"},
-  "Precision": {"N": "0"}
+  "Description": {"S": "Temperature to which air must be cooled to become saturated with water vapor"},
+  "Id": {"N": "16"},
+  "Name": {"S": "DewPoint"},
+  "Precision": {"N": "1"}
 }
 ITEM
 }
@@ -310,11 +326,11 @@ resource "aws_dynamodb_table_item" "this17" {
 
   item = <<ITEM
 {
-  "DataType": {"S": "degree"},
-  "Description": {"S": "Temperature to which air must be cooled to become saturated with water vapor"},
-  "Id": {"N": "16"},
-  "Name": {"S": "DewPoint"},
-  "Precision": {"N": "0"}
+  "DataType": {"S": "level"},
+  "Description": {"S": "Risk of icing in 5 classes: none, light, moderate, severe and very severe"},
+  "Id": {"N": "17"},
+  "Name": {"S": "Icing"},
+  "Precision": {"N": "1"}
 }
 ITEM
 }
@@ -326,11 +342,11 @@ resource "aws_dynamodb_table_item" "this18" {
 
   item = <<ITEM
 {
-  "DataType": {"S": "level"},
-  "Description": {"S": "Risk of icing in 5 classes: none, light, moderate, severe and very severe"},
-  "Id": {"N": "17"},
-  "Name": {"S": "Icing"},
-  "Precision": {"N": "0"}
+  "DataType": {"S": "%"},
+  "Description": {"S": "Amount of the sea surface covered with ice in 10 different levels"},
+  "Id": {"N": "18"},
+  "Name": {"S": "IceConcentration"},
+  "Precision": {"N": "1"}
 }
 ITEM
 }
@@ -342,11 +358,11 @@ resource "aws_dynamodb_table_item" "this19" {
 
   item = <<ITEM
 {
-  "DataType": {"S": "%"},
-  "Description": {"S": "Amount of the sea surface covered with ice in 10 different levels"},
-  "Id": {"N": "18"},
-  "Name": {"S": "IceConcentration"},
-  "Precision": {"N": "0"}
+  "DataType": {"S": "m"},
+  "Description": {"S": "Altitude in which the temperature is at 0 °C (the freezing point of water)"},
+  "Id": {"N": "19"},
+  "Name": {"S": "FreezingLevel"},
+  "Precision": {"N": "1"}
 }
 ITEM
 }
@@ -358,11 +374,11 @@ resource "aws_dynamodb_table_item" "this20" {
 
   item = <<ITEM
 {
-  "DataType": {"S": "m"},
-  "Description": {"S": "Altitude in which the temperature is at 0 °C (the freezing point of water)"},
-  "Id": {"N": "19"},
-  "Name": {"S": "FreezingLevel"},
-  "Precision": {"N": "0"}
+  "DataType": {"S": "latitude/longitude"},
+  "Description": {"S": "Ice berg position in geo-coordinates"},
+  "Id": {"N": "20"},
+  "Name": {"S": "IceBergPosition"},
+  "Precision": {"N": "1"}
 }
 ITEM
 }
@@ -374,11 +390,11 @@ resource "aws_dynamodb_table_item" "this21" {
 
   item = <<ITEM
 {
-  "DataType": {"S": "latitude/longitude"},
-  "Description": {"S": "Ice berg position in geo-coordinates"},
-  "Id": {"N": "20"},
-  "Name": {"S": "IceBergPosition"},
-  "Precision": {"N": "0"}
+  "DataType": {"S": "degree, m/s"},
+  "Description": {"S": "Combined component including ocean, tidal and wind-driven currents with direction and speed"},
+  "Id": {"N": "21"},
+  "Name": {"S": "Currents"},
+  "Precision": {"N": "0.01"}
 }
 ITEM
 }
@@ -390,11 +406,11 @@ resource "aws_dynamodb_table_item" "this22" {
 
   item = <<ITEM
 {
-  "DataType": {"S": "degree, m/s"},
-  "Description": {"S": "Combined component including ocean, tidal and wind-driven currents with direction and speed"},
-  "Id": {"N": "21"},
-  "Name": {"S": "Currents"},
-  "Precision": {"N": "2"}
+  "DataType": {"S": "degree"},
+  "Description": {"S": "Water temperature in degrees Celsius"},
+  "Id": {"N": "22"},
+  "Name": {"S": "SeaWaterTemperature"},
+  "Precision": {"N": "1"}
 }
 ITEM
 }
@@ -406,11 +422,11 @@ resource "aws_dynamodb_table_item" "this23" {
 
   item = <<ITEM
 {
-  "DataType": {"S": "degree"},
-  "Description": {"S": "Water temperature in degrees Celsius"},
-  "Id": {"N": "22"},
-  "Name": {"S": "SeaWaterTemperature"},
-  "Precision": {"N": "0"}
+  "DataType": {"S": "g/kg"},
+  "Description": {"S": "Concentration of salt in seawater"},
+  "Id": {"N": "23"},
+  "Name": {"S": "SeaWaterSalinity"},
+  "Precision": {"N": "1"}
 }
 ITEM
 }
@@ -422,11 +438,11 @@ resource "aws_dynamodb_table_item" "this24" {
 
   item = <<ITEM
 {
-  "DataType": {"S": "g/kg"},
-  "Description": {"S": "Concentration of salt in seawater"},
-  "Id": {"N": "23"},
-  "Name": {"S": "SeaWaterSalinity"},
-  "Precision": {"N": "0"}
+  "DataType": {"S": "latitude/longitude, type"},
+  "Description": {"S": "Weather front data in 3 classes: cold, warm, occluded"},
+  "Id": {"N": "24"},
+  "Name": {"S": "WeatherFrontData"},
+  "Precision": {"N": "1"}
 }
 ITEM
 }
@@ -439,10 +455,10 @@ resource "aws_dynamodb_table_item" "this25" {
   item = <<ITEM
 {
   "DataType": {"S": "latitude/longitude, type"},
-  "Description": {"S": "Weather front data in 3 classes: cold, warm, occluded"},
-  "Id": {"N": "24"},
-  "Name": {"S": "WeatherFrontData"},
-  "Precision": {"N": "0"}
+  "Description": {"S": "High / low pressure data"},
+  "Id": {"N": "25"},
+  "Name": {"S": "HighLowPressureSymbols"},
+  "Precision": {"N": "1"}
 }
 ITEM
 }
@@ -454,32 +470,16 @@ resource "aws_dynamodb_table_item" "this26" {
 
   item = <<ITEM
 {
-  "DataType": {"S": "latitude/longitude, type"},
-  "Description": {"S": "High / low pressure data"},
-  "Id": {"N": "25"},
-  "Name": {"S": "HighLowPressureSymbols"},
-  "Precision": {"N": "0"}
+  "DataType": {"S": "code"},
+  "Description": {"S": "Weather code in 10 classes: clear, fog, drizzle, rain, freezing rain, snow, rain shower, snow shower, hail and thunder"},
+  "Id": {"N": "26"},
+  "Name": {"S": "WeatherCode"},
+  "Precision": {"N": "1"}
 }
 ITEM
 }
 
 resource "aws_dynamodb_table_item" "this27" {
-  table_name = "${data.aws_dynamodb_table.table.name}"
-  hash_key   = "${data.aws_dynamodb_table.table.hash_key}"
-  range_key  = "${data.aws_dynamodb_table.table.range_key}"
-
-  item = <<ITEM
-{
-  "DataType": {"S": "code"},
-  "Description": {"S": "Weather code in 10 classes: clear, fog, drizzle, rain, freezing rain, snow, rain shower, snow shower, hail and thunder"},
-  "Id": {"N": "26"},
-  "Name": {"S": "WeatherCode"},
-  "Precision": {"N": "0"}
-}
-ITEM
-}
-
-resource "aws_dynamodb_table_item" "this28" {
   table_name = "${data.aws_dynamodb_table.table.name}"
   hash_key   = "${data.aws_dynamodb_table.table.hash_key}"
   range_key  = "${data.aws_dynamodb_table.table.range_key}"
