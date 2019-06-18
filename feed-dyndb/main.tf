@@ -27,28 +27,28 @@ data "aws_dynamodb_table" "table_package_subscriptions" {
   name = "${var.table_package_subscr_name}"
 }
 
-#resource "aws_dynamodb_table_item" "table_package_subscriptions" {
-#  table_name = "${data.aws_dynamodb_table.table_package_subscriptions.name}"
-#  hash_key   = "${data.aws_dynamodb_table.table_package_subscriptions.hash_key}"
-#  range_key  = "${data.aws_dynamodb_table.table_package_subscriptions.range_key}"
+resource "aws_dynamodb_table_item" "table_package_subscriptions" {
+  table_name = "${data.aws_dynamodb_table.table_package_subscriptions.name}"
+  hash_key   = "${data.aws_dynamodb_table.table_package_subscriptions.hash_key}"
+  range_key  = "${data.aws_dynamodb_table.table_package_subscriptions.range_key}"
 
-#  item = <<ITEM
-#{
-#  "Areas": {"L":[{"M":{"Definition":{"M":{"geometry":{"M":{"coordinates":{"L":[{"L":[{"L":[{"N":"-180"},{"N":"-90"}]},{"L":[{"N":"-180"},{"N":"90"}]},{"L":[{"N":"180"},{"N":"90"}]},{"L":[{"N":"180"},{"N":"-90"}]},{"L":[{"N":"-180"},{"N":"-90"}]}]}]},"type":{"S":"Polygon"}}},"properties":{"M":{}},"type":{"S":"Feature"}}},"Elements":{"L":[{"M":{"Resolution":{"N":"2.5"},"WeatherElement":{"N":"0"}}},{"M":{"Resolution":{"N":"2.5"},"WeatherElement":{"N":"2"}}}]},"ForecastLength":{"N":"48"}}}]},
-#  "CreatedDate": {"S":"0001-01-01T00:00:00.000Z"},
-#  "Deleted":{"N":"0"},
-#  "Delivery":{"M":{"Method":{"S":"Email"},"MethodOptions":{"M":{"EmailFrom":{"S":"shipforecast@meteogroup.com"},"EmailTo":{"S":"shipforecast@meteogroup.com"}}},"Type":{"S":"Schedule"},"TypeOptions":{"M":{"Expression":{"S":"* * * * *"},"StartFrom":{"S":"2019-06-17T11:16:56.185907Z"}}}}},
-#  "Id":{"S":"M2ZhY2M2MmItNzMyOS00ODJkLTlkM2ItNzY2YzdjNzYyZTk2"},
-#  "Imo":{"S":"123456"},
-#  "RowVersion":{"N":"1"},
-#  "UpdatedDate":{"S":"2019-06-17T11:16:56.186Z"}
-#}
-#ITEM
+  item = <<ITEM
+{
+  "Areas": {"L":[{"M":{"Definition":{"M":{"geometry":{"M":{"coordinates":{"L":[{"L":[{"L":[{"N":"-180"},{"N":"-90"}]},{"L":[{"N":"-180"},{"N":"90"}]},{"L":[{"N":"180"},{"N":"90"}]},{"L":[{"N":"180"},{"N":"-90"}]},{"L":[{"N":"-180"},{"N":"-90"}]}]}]},"type":{"S":"Polygon"}}},"properties":{"M":{}},"type":{"S":"Feature"}}},"Elements":{"L":[{"M":{"Resolution":{"N":"2.5"},"WeatherElement":{"N":"0"}}},{"M":{"Resolution":{"N":"2.5"},"WeatherElement":{"N":"2"}}}]},"ForecastLength":{"N":"48"}}}]},
+  "CreatedDate": {"S":"0001-01-01T00:00:00.000Z"},
+  "Deleted":{"N":"0"},
+  "Delivery":{"M":{"Method":{"S":"Email"},"MethodOptions":{"M":{"EmailFrom":{"S":"shipforecast@meteogroup.com"},"EmailTo":{"S":"shipforecast@meteogroup.com"}}},"Type":{"S":"Schedule"},"TypeOptions":{"M":{"Expression":{"S":"* * * * *"},"StartFrom":{"S":"2019-06-17T11:16:56.185907Z"}}}}},
+  "Id":{"S":"M2ZhY2M2MmItNzMyOS00ODJkLTlkM2ItNzY2YzdjNzYyZTk2"},
+  "Imo":{"S":"123456"},
+  "RowVersion":{"N":"1"},
+  "UpdatedDate":{"S":"2019-06-17T11:16:56.186Z"}
+}
+ITEM
 
-#  lifecycle {
-#    ignore_changes = ["item"]
-#  }
-#}
+  lifecycle {
+    ignore_changes = ["item"]
+  }
+}
 
 resource "aws_dynamodb_table_item" "this0" {
   table_name = "${data.aws_dynamodb_table.table.name}"
