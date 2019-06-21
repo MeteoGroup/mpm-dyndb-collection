@@ -497,3 +497,19 @@ resource "aws_dynamodb_table_item" "this27" {
 }
 ITEM
 }
+
+resource "aws_dynamodb_table_item" "this28" {
+  table_name = "${data.aws_dynamodb_table.table.name}"
+  hash_key   = "${data.aws_dynamodb_table.table.hash_key}"
+  range_key  = "${data.aws_dynamodb_table.table.range_key}"
+
+  item = <<ITEM
+{
+  "DataType": {"S": "degree, m/s"},
+  "Description": {"S": "Wind speed at 30m with direction relative to North"},
+  "Id": {"N": "28"},
+  "Name": {"S": "Wind30M"},
+  "Precision": {"N": "0.5"}
+}
+ITEM
+}
