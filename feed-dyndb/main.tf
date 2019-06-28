@@ -64,6 +64,11 @@ resource "aws_dynamodb_table_item" "this0" {
   "Precision": {"N": "1"}
 }
 ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
+
 }
 
 resource "aws_dynamodb_table_item" "this1" {
@@ -80,6 +85,10 @@ resource "aws_dynamodb_table_item" "this1" {
   "Precision": {"N": "1"}
 }
 ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
 }
 
 resource "aws_dynamodb_table_item" "this2" {
@@ -96,6 +105,10 @@ resource "aws_dynamodb_table_item" "this2" {
   "Precision": {"N": "0.5"}
 }
 ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
 }
 
 resource "aws_dynamodb_table_item" "this3" {
@@ -112,6 +125,10 @@ resource "aws_dynamodb_table_item" "this3" {
   "Precision": {"N": "0.5"}
 }
 ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
 }
 
 resource "aws_dynamodb_table_item" "this4" {
@@ -128,6 +145,10 @@ resource "aws_dynamodb_table_item" "this4" {
   "Precision": {"N": "0.5"}
 }
 ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
 }
 
 resource "aws_dynamodb_table_item" "this5" {
@@ -144,6 +165,10 @@ resource "aws_dynamodb_table_item" "this5" {
   "Precision": {"N": "0.5"}
 }
 ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
 }
 
 resource "aws_dynamodb_table_item" "this6" {
@@ -160,6 +185,10 @@ resource "aws_dynamodb_table_item" "this6" {
   "Precision": {"N": "0.5"}
 }
 ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
 }
 
 resource "aws_dynamodb_table_item" "this7" {
@@ -176,6 +205,10 @@ resource "aws_dynamodb_table_item" "this7" {
   "Precision": {"N": "0.1"}
 }
 ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
 }
 
 resource "aws_dynamodb_table_item" "this8" {
@@ -192,6 +225,10 @@ resource "aws_dynamodb_table_item" "this8" {
   "Precision": {"N": "0.1"}
 }
 ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
 }
 
 resource "aws_dynamodb_table_item" "this9" {
@@ -208,6 +245,10 @@ resource "aws_dynamodb_table_item" "this9" {
   "Precision": {"N": "1"}
 }
 ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
 }
 
 resource "aws_dynamodb_table_item" "this10" {
@@ -224,6 +265,10 @@ resource "aws_dynamodb_table_item" "this10" {
   "Precision": {"N": "0.1"}
 }
 ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
 }
 
 resource "aws_dynamodb_table_item" "this11" {
@@ -240,6 +285,10 @@ resource "aws_dynamodb_table_item" "this11" {
   "Precision": {"N": "1"}
 }
 ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
 }
 
 resource "aws_dynamodb_table_item" "this12" {
@@ -256,6 +305,10 @@ resource "aws_dynamodb_table_item" "this12" {
   "Precision": {"N": "1"}
 }
 ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
 }
 
 resource "aws_dynamodb_table_item" "this13" {
@@ -272,6 +325,10 @@ resource "aws_dynamodb_table_item" "this13" {
   "Precision": {"N": "1"}
 }
 ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
 }
 
 resource "aws_dynamodb_table_item" "this14" {
@@ -288,6 +345,10 @@ resource "aws_dynamodb_table_item" "this14" {
   "Precision": {"N": "1"}
 }
 ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
 }
 
 resource "aws_dynamodb_table_item" "this15" {
@@ -304,6 +365,10 @@ resource "aws_dynamodb_table_item" "this15" {
   "Precision": {"N": "1"}
 }
 ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
 }
 
 resource "aws_dynamodb_table_item" "this16" {
@@ -320,6 +385,10 @@ resource "aws_dynamodb_table_item" "this16" {
   "Precision": {"N": "1"}
 }
 ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
 }
 
 resource "aws_dynamodb_table_item" "this17" {
@@ -336,6 +405,9 @@ resource "aws_dynamodb_table_item" "this17" {
   "Precision": {"N": "1"}
 }
 ITEM
+  lifecycle {
+    ignore_changes = ["item"]
+  }
 }
 
 resource "aws_dynamodb_table_item" "this18" {
@@ -352,6 +424,9 @@ resource "aws_dynamodb_table_item" "this18" {
   "Precision": {"N": "1"}
 }
 ITEM
+  lifecycle {
+    ignore_changes = ["item"]
+  }
 }
 
 resource "aws_dynamodb_table_item" "this19" {
@@ -368,6 +443,10 @@ resource "aws_dynamodb_table_item" "this19" {
   "Precision": {"N": "1"}
 }
 ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
 }
 
 resource "aws_dynamodb_table_item" "this20" {
@@ -384,6 +463,10 @@ resource "aws_dynamodb_table_item" "this20" {
   "Precision": {"N": "1"}
 }
 ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
 }
 
 resource "aws_dynamodb_table_item" "this21" {
@@ -400,6 +483,10 @@ resource "aws_dynamodb_table_item" "this21" {
   "Precision": {"N": "0.01"}
 }
 ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
 }
 
 resource "aws_dynamodb_table_item" "this22" {
@@ -416,6 +503,10 @@ resource "aws_dynamodb_table_item" "this22" {
   "Precision": {"N": "1"}
 }
 ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
 }
 
 resource "aws_dynamodb_table_item" "this23" {
@@ -432,6 +523,10 @@ resource "aws_dynamodb_table_item" "this23" {
   "Precision": {"N": "1"}
 }
 ITEM
+  
+  lifecycle {
+    ignore_changes = ["item"]
+  }
 }
 
 resource "aws_dynamodb_table_item" "this24" {
@@ -448,6 +543,10 @@ resource "aws_dynamodb_table_item" "this24" {
   "Precision": {"N": "1"}
 }
 ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
 }
 
 resource "aws_dynamodb_table_item" "this25" {
@@ -464,6 +563,10 @@ resource "aws_dynamodb_table_item" "this25" {
   "Precision": {"N": "1"}
 }
 ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
 }
 
 resource "aws_dynamodb_table_item" "this26" {
@@ -480,6 +583,10 @@ resource "aws_dynamodb_table_item" "this26" {
   "Precision": {"N": "1"}
 }
 ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
 }
 
 resource "aws_dynamodb_table_item" "this27" {
@@ -496,6 +603,10 @@ resource "aws_dynamodb_table_item" "this27" {
   "Precision": {"N": "1"}
 }
 ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
 }
 
 resource "aws_dynamodb_table_item" "this28" {
@@ -512,6 +623,10 @@ resource "aws_dynamodb_table_item" "this28" {
   "Precision": {"N": "0.5"}
 }
 ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
 }
 
 resource "aws_dynamodb_table_item" "this29" {
@@ -528,4 +643,8 @@ resource "aws_dynamodb_table_item" "this29" {
   "Precision": {"N": "0.5"}
 }
 ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
 }
