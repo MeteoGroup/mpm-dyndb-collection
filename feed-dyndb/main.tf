@@ -513,3 +513,19 @@ resource "aws_dynamodb_table_item" "this28" {
 }
 ITEM
 }
+
+resource "aws_dynamodb_table_item" "this29" {
+  table_name = "${data.aws_dynamodb_table.table.name}"
+  hash_key   = "${data.aws_dynamodb_table.table.hash_key}"
+  range_key  = "${data.aws_dynamodb_table.table.range_key}"
+
+  item = <<ITEM
+{
+  "DataType": {"S": "kg/m^3"},
+  "Description": {"S": "The function of sea water salinity, temperature and pressure"},
+  "Id": {"N": "29"},
+  "Name": {"S": "SeaWaterDensity"},
+  "Precision": {"N": "0.5"}
+}
+ITEM
+}
