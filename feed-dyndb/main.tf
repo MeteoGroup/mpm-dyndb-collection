@@ -34,11 +34,14 @@ resource "aws_dynamodb_table_item" "table_package_subscriptions" {
 
   item = <<ITEM
 {
-  "Area": {"M":{"Feature":{"M":{"geometry":{"M":{"coordinates":{"L":[{"L":[{"L":[{"N":"-180"},{"N":"-90"}]},{"L":[{"N":"-180"},{"N":"90"}]},{"L":[{"N":"180"},{"N":"90"}]},{"L":[{"N":"180"},{"N":"-90"}]},{"L":[{"N":"-180"},{"N":"-90"}]}]}]},"type":{"S":"Polygon"}}},"properties":{"M":{}},"type":{"S":"Feature"}}}}},
-  "Delivery":{"M":{"Params":{"M":{"EmailFrom":{"S":"shipforecast@meteogroup.com"},"EmailTo":{"S":"shipforecast@meteogroup.com"}}},"Type":{"S":"email"}}},
-  "Id":{"S":"623b09f4-264b-41be-91ac-fe5b305e6d1e"},
-  "SubscriberName":{"S":"zxcvxzcv"},
-  "WeatherElements":{"SS":["AirTemperature","Currents","DewPoint","FreezingLevel","HPa500","HighLowPressureSymbols","Hurricanes","IceBergPosition","IceConcentration","Icing","Precipitation","Pressure","RelativeHumidity","RiskWaveHeight","RiskWindSpeed","SeaWaterSalinity","SeaWaterTemperature","Swell","SwellPeriod","Visibility","Wave","WavePeriod","WeatherCode","WeatherFrontData","Wind10M","Wind50M","WindGusts10M","WindGusts50M"]}}
+  "Areas": {"L":[{"M":{"Definition":{"M":{"geometry":{"M":{"coordinates":{"L":[{"L":[{"L":[{"N":"-180"},{"N":"-90"}]},{"L":[{"N":"-180"},{"N":"90"}]},{"L":[{"N":"180"},{"N":"90"}]},{"L":[{"N":"180"},{"N":"-90"}]},{"L":[{"N":"-180"},{"N":"-90"}]}]}]},"type":{"S":"Polygon"}}},"properties":{"M":{}},"type":{"S":"Feature"}}},"Elements":{"L":[{"M":{"Resolution":{"N":"2.5"},"WeatherElement":{"N":"0"}}},{"M":{"Resolution":{"N":"2.5"},"WeatherElement":{"N":"2"}}}]},"ForecastLength":{"N":"48"}}}]},
+  "CreatedDate": {"S":"0001-01-01T00:00:00.000Z"},
+  "Deleted":{"N":"0"},
+  "Delivery":{"M":{"Method":{"S":"Email"},"MethodOptions":{"M":{"EmailFrom":{"S":"shipforecast@meteogroup.com"},"EmailTo":{"S":"shipforecast@meteogroup.com"}}},"Type":{"S":"Schedule"},"TypeOptions":{"M":{"Expression":{"S":"* * * * *"},"StartFrom":{"S":"2019-06-17T11:16:56.185907Z"}}}}},
+  "Id":{"S":"M2ZhY2M2MmItNzMyOS00ODJkLTlkM2ItNzY2YzdjNzYyZTk2"},
+  "Imo":{"S":"123456"},
+  "RowVersion":{"N":"1"},
+  "UpdatedDate":{"S":"2019-06-17T11:16:56.186Z"}
 }
 ITEM
 
