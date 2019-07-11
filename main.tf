@@ -14,6 +14,7 @@ module "maersk_package_subscriptions" {
   hash_key_type  = "S"
   range_key      = "Imo"
   range_key_type = "S"
+  
 
   tags = "${var.tags}"
 }
