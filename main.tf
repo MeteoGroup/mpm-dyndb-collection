@@ -12,8 +12,9 @@ module "maersk_package_subscriptions" {
   name           = "${var.prefix}_${var.project}_package_subscriptions"
   hash_key       = "Id"
   hash_key_type  = "S"
-  range_key      = "SubscriberName"
+  range_key      = "Imo"
   range_key_type = "S"
+  
 
   tags = "${var.tags}"
 }
