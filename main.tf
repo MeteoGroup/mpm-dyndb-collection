@@ -100,3 +100,12 @@ module "maersk_route_jobs" {
 
   tags = "${var.tags}"
 }
+
+module "maersk_danger_categories" {
+  source        = "git::https://github.com/MeteoGroup/infra-modules-terraform.git//modules/dynamodb?ref=master"
+  name          = "${var.prefix}_maersk_danger_categories"
+  hash_key      = "Id"
+  hash_key_type = "S"
+
+  tags = "${var.tags}"
+}
