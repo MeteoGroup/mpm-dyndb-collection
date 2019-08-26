@@ -109,3 +109,64 @@ module "maersk_danger_categories" {
 
   tags = "${var.tags}"
 }
+
+module "maersk_forecastweatherelement_v2" {
+  source         = "git::https://github.com/MeteoGroup/infra-modules-terraform.git//modules/dynamodb?ref=master"
+  name           = "${var.prefix}_${var.project}_forecastweatherelement_v2"
+  hash_key       = "Id"
+  hash_key_type  = "S"
+  range_key      = "Name"
+  range_key_type = "S"
+  
+
+  tags = "${var.tags}"
+}
+
+module "maersk_maersk_forecastmetadata_v2" {
+  source         = "git::https://github.com/MeteoGroup/infra-modules-terraform.git//modules/dynamodb?ref=master"
+  name           = "${var.prefix}_${var.project}_forecastmetadata_v2"
+  hash_key       = "Id"
+  hash_key_type  = "S"
+  range_key      = "IssuedDate"
+  range_key_type = "S"
+  
+
+  tags = "${var.tags}"
+}
+
+
+module "maersk_maersk_forecastelement_v2" {
+  source         = "git::https://github.com/MeteoGroup/infra-modules-terraform.git//modules/dynamodb?ref=master"
+  name           = "${var.prefix}_${var.project}_forecastelement_v2"
+  hash_key       = "Id"
+  hash_key_type  = "S"
+  range_key      = "ForecastId"
+  range_key_type = "S"
+  
+
+  tags = "${var.tags}"
+}
+
+module "forecast_evidence" {
+  source         = "git::https://github.com/MeteoGroup/infra-modules-terraform.git//modules/dynamodb?ref=master"
+  name           = "${var.prefix}_forecast_evidence"
+  hash_key       = "TenantId"
+  hash_key_type  = "S"  
+
+  tags = "${var.tags}"
+}
+
+module "dataset_processing_journal" {
+  source         = "git::https://github.com/MeteoGroup/infra-modules-terraform.git//modules/dynamodb?ref=master"
+  name           = "${var.prefix}_dataset_processing_journal"
+  hash_key       = "ModelId"
+  hash_key_type  = "S"  
+  range_key      = "DatasetName"
+  range_key_type = "S"
+  tags = "${var.tags}"
+}
+
+
+
+
+
