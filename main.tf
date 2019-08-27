@@ -14,7 +14,6 @@ module "maersk_package_subscriptions" {
   hash_key_type  = "S"
   range_key      = "Imo"
   range_key_type = "S"
-  
 
   tags = "${var.tags}"
 }
@@ -42,10 +41,10 @@ module "maersk_forecastweatherelement" {
 }
 
 module "populate_forecastweatherelement" {
-  source                    = "./feed-dyndb"
-  table_name                = "${module.maersk_forecastweatherelement.table_name}"
-  table_package_subscr_name = "${module.maersk_package_subscriptions.table_name}"
-  table_tenant_reg_name     = "${module.tenant_registrations.table_name}"
+  source                          = "./feed-dyndb"
+  table_name                      = "${module.maersk_forecastweatherelement.table_name}"
+  table_package_subscr_name       = "${module.maersk_package_subscriptions.table_name}"
+  table_tenant_reg_name           = "${module.tenant_registrations.table_name}"
   table_forecastweatherelement_v2 = "${module.maersk_forecastweatherelement_v2.table_name}"
 }
 
@@ -115,10 +114,9 @@ module "maersk_forecastweatherelement_v2" {
   source         = "git::https://github.com/MeteoGroup/infra-modules-terraform.git//modules/dynamodb?ref=master"
   name           = "${var.prefix}_${var.project}_forecastweatherelement_v2"
   hash_key       = "Id"
-  hash_key_type  = "S"
+  hash_key_type  = "N"
   range_key      = "Name"
   range_key_type = "S"
-  
 
   tags = "${var.tags}"
 }
@@ -130,11 +128,9 @@ module "maersk_maersk_forecastmetadata_v2" {
   hash_key_type  = "S"
   range_key      = "IssuedDate"
   range_key_type = "S"
-  
 
   tags = "${var.tags}"
 }
-
 
 module "maersk_maersk_forecastelement_v2" {
   source         = "git::https://github.com/MeteoGroup/infra-modules-terraform.git//modules/dynamodb?ref=master"
@@ -143,16 +139,15 @@ module "maersk_maersk_forecastelement_v2" {
   hash_key_type  = "S"
   range_key      = "ForecastId"
   range_key_type = "S"
-  
 
   tags = "${var.tags}"
 }
 
 module "forecast_evidence" {
-  source         = "git::https://github.com/MeteoGroup/infra-modules-terraform.git//modules/dynamodb?ref=master"
-  name           = "${var.prefix}_forecast_evidence"
-  hash_key       = "TenantId"
-  hash_key_type  = "S"  
+  source        = "git::https://github.com/MeteoGroup/infra-modules-terraform.git//modules/dynamodb?ref=master"
+  name          = "${var.prefix}_forecast_evidence"
+  hash_key      = "TenantId"
+  hash_key_type = "S"
 
   tags = "${var.tags}"
 }
@@ -161,13 +156,8 @@ module "dataset_processing_journal" {
   source         = "git::https://github.com/MeteoGroup/infra-modules-terraform.git//modules/dynamodb?ref=master"
   name           = "${var.prefix}_dataset_processing_journal"
   hash_key       = "ModelId"
-  hash_key_type  = "S"  
+  hash_key_type  = "S"
   range_key      = "DatasetName"
   range_key_type = "S"
-  tags = "${var.tags}"
+  tags           = "${var.tags}"
 }
-
-
-
-
-
