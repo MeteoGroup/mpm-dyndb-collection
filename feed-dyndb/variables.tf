@@ -3,6 +3,11 @@ variable "table_name" {
   description = "Table name has to be forecastweatherelement"
 }
 
+#variable "table_forecastweatherelement_v2" {
+#  type        = "string"
+#  description = "Table name has to be forecastweatherelement v2"
+#}
+
 variable "table_package_subscr_name" {
   type        = "string"
   description = "Table name has to be maersk_package_subscriptions"
