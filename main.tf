@@ -111,16 +111,16 @@ module "maersk_danger_categories" {
   tags = "${var.tags}"
 }
 
-#module "maersk_forecastweatherelement_v2" {
-#  source         = "git::https://github.com/MeteoGroup/infra-modules-terraform.git//modules/dynamodb?ref=master"
-#  name           = "${var.prefix}_${var.project}_forecastweatherelement_v2"
-#  hash_key       = "Id"
-#  hash_key_type  = "N"
-#  range_key      = "Name"
-#  range_key_type = "S"
-#
-#  tags = "${var.tags}"
-#}
+module "maersk_forecastweatherelement_v2" {
+  source         = "git::https://github.com/MeteoGroup/infra-modules-terraform.git//modules/dynamodb?ref=master"
+  name           = "${var.prefix}_${var.project}_forecastweatherelement_v2"
+  hash_key       = "Id"
+  hash_key_type  = "N"
+  range_key      = "Name"
+  range_key_type = "S"
+
+  tags = "${var.tags}"
+}
 
 module "maersk_maersk_forecastmetadata_v2" {
   source         = "git::https://github.com/MeteoGroup/infra-modules-terraform.git//modules/dynamodb?ref=master"
