@@ -41,12 +41,11 @@ module "maersk_forecastweatherelement" {
 }
 
 module "populate_forecastweatherelement" {
-  source                    = "./feed-dyndb"
-  table_name                = "${module.maersk_forecastweatherelement.table_name}"
-  table_package_subscr_name = "${module.maersk_package_subscriptions.table_name}"
-  table_tenant_reg_name     = "${module.tenant_registrations.table_name}"
-
-  #table_forecastweatherelement_v2 = "${module.maersk_forecastweatherelement_v2.table_name}"
+  source                          = "./feed-dyndb"
+  table_name                      = "${module.maersk_forecastweatherelement.table_name}"
+  table_package_subscr_name       = "${module.maersk_package_subscriptions.table_name}"
+  table_tenant_reg_name           = "${module.tenant_registrations.table_name}"
+  table_forecastweatherelement_v2 = "${module.maersk_forecastweatherelement_v2.table_name}"
 }
 
 module "maersk_sender_handle_subscriptions" {
