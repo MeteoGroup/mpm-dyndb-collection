@@ -1,5 +1,5 @@
 module "maersk_trigger_shore_producer_message_history" {
-  source        = "git::https://github.com/MeteoGroup/infra-modules-terraform.git//modules/dynamodb?ref=master"
+  source        = "./modules/dynamodb"
   name          = "${var.prefix}_${var.project}_trigger_shore_producer_message_history"
   hash_key      = "Id"
   hash_key_type = "S"
@@ -8,7 +8,7 @@ module "maersk_trigger_shore_producer_message_history" {
 }
 
 module "maersk_package_subscriptions" {
-  source         = "git::https://github.com/MeteoGroup/infra-modules-terraform.git//modules/dynamodb?ref=master"
+  source         = "./modules/dynamodb"
   name           = "${var.prefix}_${var.project}_package_subscriptions"
   hash_key       = "Id"
   hash_key_type  = "S"
@@ -19,7 +19,7 @@ module "maersk_package_subscriptions" {
 }
 
 module "maersk_forecastmetadata" {
-  source         = "git::https://github.com/MeteoGroup/infra-modules-terraform.git//modules/dynamodb?ref=master"
+  source         = "./modules/dynamodb"
   name           = "${var.prefix}_${var.project}_forecastmetadata"
   hash_key       = "Id"
   hash_key_type  = "S"
@@ -30,7 +30,7 @@ module "maersk_forecastmetadata" {
 }
 
 module "maersk_forecastweatherelement" {
-  source         = "git::https://github.com/MeteoGroup/infra-modules-terraform.git//modules/dynamodb?ref=master"
+  source         = "./modules/dynamodb"
   name           = "${var.prefix}_${var.project}_forecastweatherelement"
   hash_key       = "Id"
   hash_key_type  = "N"
@@ -49,7 +49,7 @@ module "populate_forecastweatherelement" {
 }
 
 module "maersk_sender_handle_subscriptions" {
-  source         = "git::https://github.com/MeteoGroup/infra-modules-terraform.git//modules/dynamodb?ref=master"
+  source         = "./modules/dynamodb"
   name           = "${var.prefix}_${var.project}_sender_handle_subscriptions"
   hash_key       = "Id"
   hash_key_type  = "S"
@@ -60,7 +60,7 @@ module "maersk_sender_handle_subscriptions" {
 }
 
 module "tenants" {
-  source         = "git::https://github.com/MeteoGroup/infra-modules-terraform.git//modules/dynamodb?ref=master"
+  source         = "./modules/dynamodb"
   name           = "${var.prefix}_tenants"
   hash_key       = "Id"
   hash_key_type  = "S"
@@ -71,7 +71,7 @@ module "tenants" {
 }
 
 module "maersk_subscriptions_handle_events" {
-  source         = "git::https://github.com/MeteoGroup/infra-modules-terraform.git//modules/dynamodb?ref=master"
+  source         = "./modules/dynamodb"
   name           = "${var.prefix}_${var.project}_subscriptions_handle_events"
   hash_key       = "Id"
   hash_key_type  = "S"
@@ -82,7 +82,7 @@ module "maersk_subscriptions_handle_events" {
 }
 
 module "tenant_registrations" {
-  source         = "git::https://github.com/MeteoGroup/infra-modules-terraform.git//modules/dynamodb?ref=master"
+  source         = "./modules/dynamodb"
   name           = "${var.prefix}_tenant_registrations"
   hash_key       = "Id"
   hash_key_type  = "S"
@@ -93,7 +93,7 @@ module "tenant_registrations" {
 }
 
 module "maersk_route_jobs" {
-  source        = "git::https://github.com/MeteoGroup/infra-modules-terraform.git//modules/dynamodb?ref=master"
+  source        = "./modules/dynamodb"
   name          = "${var.prefix}_maersk_route_jobs"
   hash_key      = "Id"
   hash_key_type = "S"
@@ -102,7 +102,7 @@ module "maersk_route_jobs" {
 }
 
 module "maersk_danger_categories" {
-  source        = "git::https://github.com/MeteoGroup/infra-modules-terraform.git//modules/dynamodb?ref=master"
+  source        = "./modules/dynamodb"
   name          = "${var.prefix}_maersk_danger_categories"
   hash_key      = "Id"
   hash_key_type = "S"
@@ -111,7 +111,7 @@ module "maersk_danger_categories" {
 }
 
 module "maersk_forecastweatherelement_v2" {
-  source         = "git::https://github.com/MeteoGroup/infra-modules-terraform.git//modules/dynamodb?ref=master"
+  source         = "./modules/dynamodb"
   name           = "${var.prefix}_${var.project}_forecastweatherelement_v2"
   hash_key       = "Id"
   hash_key_type  = "N"
@@ -122,7 +122,7 @@ module "maersk_forecastweatherelement_v2" {
 }
 
 module "maersk_maersk_forecastmetadata_v2" {
-  source         = "git::https://github.com/MeteoGroup/infra-modules-terraform.git//modules/dynamodb?ref=master"
+  source         = "./modules/dynamodb"
   name           = "${var.prefix}_${var.project}_forecastmetadata_v2"
   hash_key       = "Id"
   hash_key_type  = "S"
@@ -133,7 +133,7 @@ module "maersk_maersk_forecastmetadata_v2" {
 }
 
 module "maersk_maersk_forecastelement_v2" {
-  source         = "git::https://github.com/MeteoGroup/infra-modules-terraform.git//modules/dynamodb?ref=master"
+  source         = "./modules/dynamodb"
   name           = "${var.prefix}_${var.project}_forecastelement_v2"
   hash_key       = "Id"
   hash_key_type  = "S"
@@ -144,7 +144,7 @@ module "maersk_maersk_forecastelement_v2" {
 }
 
 module "forecast_evidence" {
-  source        = "git::https://github.com/MeteoGroup/infra-modules-terraform.git//modules/dynamodb?ref=master"
+  source        = "./modules/dynamodb"
   name          = "${var.prefix}_forecast_evidence"
   hash_key      = "TenantId"
   hash_key_type = "S"
@@ -153,7 +153,7 @@ module "forecast_evidence" {
 }
 
 module "dataset_processing_journal" {
-  source         = "git::https://github.com/MeteoGroup/infra-modules-terraform.git//modules/dynamodb?ref=master"
+  source         = "./modules/dynamodb"
   name           = "${var.prefix}_dataset_processing_journal"
   hash_key       = "ModelId"
   hash_key_type  = "S"
