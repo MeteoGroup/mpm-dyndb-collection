@@ -1235,11 +1235,11 @@ resource "aws_dynamodb_table_item" "maersk_route_danger_categories0" {
 
   item = <<ITEM
 {
-  "Id": { "N": 0 },
-  "Code": { "N": 42 },
+  "Id": { "N": "0" },
+  "Code": { "N": "42" },
   "ClassCode": { "S": "DEPARE" },
   "Name": { "S": "Depth area" },
-  "Severity": { "N": 4 }
+  "Severity": { "N": "4" }
 }
 ITEM
 
