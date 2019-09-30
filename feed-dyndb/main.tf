@@ -1231,7 +1231,6 @@ ITEM
 resource "aws_dynamodb_table_item" "maersk_route_danger_categories0" {
   table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
   hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-  range_key  = "${data.aws_dynamodb_table.maersk_route_danger_categories.range_key}"
 
   item = <<ITEM
 {
@@ -1251,7 +1250,6 @@ ITEM
 resource "aws_dynamodb_table_item" "maersk_route_danger_categories1" {
   table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
   hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-  range_key  = "${data.aws_dynamodb_table.maersk_route_danger_categories.range_key}"
 
   item = <<ITEM
 {
@@ -1271,7 +1269,6 @@ ITEM
 resource "aws_dynamodb_table_item" "maersk_route_danger_categories2" {
   table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
   hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-  range_key  = "${data.aws_dynamodb_table.maersk_route_danger_categories.range_key}"
 
   item = <<ITEM
 { 
@@ -1291,7 +1288,6 @@ ITEM
 resource "aws_dynamodb_table_item" "maersk_route_danger_categories3" {
   table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
   hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-  range_key  = "${data.aws_dynamodb_table.maersk_route_danger_categories.range_key}"
 
   item = <<ITEM
 { 
@@ -1311,7 +1307,6 @@ ITEM
 resource "aws_dynamodb_table_item" "maersk_route_danger_categories4" {
   table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
   hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-  range_key  = "${data.aws_dynamodb_table.maersk_route_danger_categories.range_key}"
 
   item = <<ITEM
 { 
@@ -1331,7 +1326,6 @@ ITEM
 resource "aws_dynamodb_table_item" "maersk_route_danger_categories5" {
   table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
   hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-  range_key  = "${data.aws_dynamodb_table.maersk_route_danger_categories.range_key}"
 
   item = <<ITEM
 { 
@@ -1351,7 +1345,6 @@ ITEM
 resource "aws_dynamodb_table_item" "maersk_route_danger_categories6" {
   table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
   hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-  range_key  = "${data.aws_dynamodb_table.maersk_route_danger_categories.range_key}"
 
   item = <<ITEM
 { 
@@ -1371,7 +1364,6 @@ ITEM
 resource "aws_dynamodb_table_item" "maersk_route_danger_categories7" {
   table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
   hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-  range_key  = "${data.aws_dynamodb_table.maersk_route_danger_categories.range_key}"
 
   item = <<ITEM
 { 
@@ -1391,7 +1383,6 @@ ITEM
 resource "aws_dynamodb_table_item" "maersk_route_danger_categories8" {
   table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
   hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-  range_key  = "${data.aws_dynamodb_table.maersk_route_danger_categories.range_key}"
 
   item = <<ITEM
 { 
@@ -1411,7 +1402,6 @@ ITEM
 resource "aws_dynamodb_table_item" "maersk_route_danger_categories9" {
   table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
   hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-  range_key  = "${data.aws_dynamodb_table.maersk_route_danger_categories.range_key}"
 
   item = <<ITEM
 { 
@@ -1431,7 +1421,6 @@ ITEM
 resource "aws_dynamodb_table_item" "maersk_route_danger_categories10" {
   table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
   hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-  range_key  = "${data.aws_dynamodb_table.maersk_route_danger_categories.range_key}"
 
   item = <<ITEM
 { 
@@ -1451,7 +1440,6 @@ ITEM
 resource "aws_dynamodb_table_item" "maersk_route_danger_categories11" {
   table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
   hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-  range_key  = "${data.aws_dynamodb_table.maersk_route_danger_categories.range_key}"
 
   item = <<ITEM
 { 
@@ -1471,7 +1459,6 @@ ITEM
 resource "aws_dynamodb_table_item" "maersk_route_danger_categories12" {
   table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
   hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-  range_key  = "${data.aws_dynamodb_table.maersk_route_danger_categories.range_key}"
 
   item = <<ITEM
 { 
@@ -1491,7 +1478,6 @@ ITEM
 resource "aws_dynamodb_table_item" "maersk_route_danger_categories13" {
   table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
   hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-  range_key  = "${data.aws_dynamodb_table.maersk_route_danger_categories.range_key}"
 
   item = <<ITEM
 { 
@@ -1511,7 +1497,6 @@ ITEM
 resource "aws_dynamodb_table_item" "maersk_route_danger_categories14" {
   table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
   hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-  range_key  = "${data.aws_dynamodb_table.maersk_route_danger_categories.range_key}"
 
   item = <<ITEM
 { 
@@ -1531,7 +1516,6 @@ ITEM
 resource "aws_dynamodb_table_item" "maersk_route_danger_categories15" {
   table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
   hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-  range_key  = "${data.aws_dynamodb_table.maersk_route_danger_categories.range_key}"
 
   item = <<ITEM
 { 
@@ -1551,7 +1535,6 @@ ITEM
 resource "aws_dynamodb_table_item" "maersk_route_danger_categories16" {
   table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
   hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-  range_key  = "${data.aws_dynamodb_table.maersk_route_danger_categories.range_key}"
 
   item = <<ITEM
 { 
@@ -1571,7 +1554,6 @@ ITEM
 resource "aws_dynamodb_table_item" "maersk_route_danger_categories17" {
   table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
   hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-  range_key  = "${data.aws_dynamodb_table.maersk_route_danger_categories.range_key}"
 
   item = <<ITEM
 { 
@@ -1591,7 +1573,6 @@ ITEM
 resource "aws_dynamodb_table_item" "maersk_route_danger_categories18" {
   table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
   hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-  range_key  = "${data.aws_dynamodb_table.maersk_route_danger_categories.range_key}"
 
   item = <<ITEM
 { 
@@ -1611,7 +1592,6 @@ ITEM
 resource "aws_dynamodb_table_item" "maersk_route_danger_categories19" {
   table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
   hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-  range_key  = "${data.aws_dynamodb_table.maersk_route_danger_categories.range_key}"
 
   item = <<ITEM
 { 
@@ -1631,7 +1611,6 @@ ITEM
 resource "aws_dynamodb_table_item" "maersk_route_danger_categories20" {
   table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
   hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-  range_key  = "${data.aws_dynamodb_table.maersk_route_danger_categories.range_key}"
 
   item = <<ITEM
 { 
@@ -1651,7 +1630,6 @@ ITEM
 resource "aws_dynamodb_table_item" "maersk_route_danger_categories21" {
   table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
   hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-  range_key  = "${data.aws_dynamodb_table.maersk_route_danger_categories.range_key}"
 
   item = <<ITEM
 { 
@@ -1671,7 +1649,6 @@ ITEM
 resource "aws_dynamodb_table_item" "maersk_route_danger_categories22" {
   table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
   hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-  range_key  = "${data.aws_dynamodb_table.maersk_route_danger_categories.range_key}"
 
   item = <<ITEM
 { 
@@ -1691,7 +1668,6 @@ ITEM
 resource "aws_dynamodb_table_item" "maersk_route_danger_categories23" {
   table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
   hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-  range_key  = "${data.aws_dynamodb_table.maersk_route_danger_categories.range_key}"
 
   item = <<ITEM
 { 
@@ -1711,7 +1687,6 @@ ITEM
 resource "aws_dynamodb_table_item" "maersk_route_danger_categories24" {
   table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
   hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-  range_key  = "${data.aws_dynamodb_table.maersk_route_danger_categories.range_key}"
 
   item = <<ITEM
 { 
@@ -1731,7 +1706,6 @@ ITEM
 resource "aws_dynamodb_table_item" "maersk_route_danger_categories25" {
   table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
   hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-  range_key  = "${data.aws_dynamodb_table.maersk_route_danger_categories.range_key}"
 
   item = <<ITEM
 { 
@@ -1751,7 +1725,6 @@ ITEM
 resource "aws_dynamodb_table_item" "maersk_route_danger_categories26" {
   table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
   hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-  range_key  = "${data.aws_dynamodb_table.maersk_route_danger_categories.range_key}"
 
   item = <<ITEM
 { 
@@ -1771,7 +1744,6 @@ ITEM
 resource "aws_dynamodb_table_item" "maersk_route_danger_categories27" {
   table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
   hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-  range_key  = "${data.aws_dynamodb_table.maersk_route_danger_categories.range_key}"
 
   item = <<ITEM
 { 
@@ -1791,7 +1763,6 @@ ITEM
 resource "aws_dynamodb_table_item" "maersk_route_danger_categories28" {
   table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
   hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-  range_key  = "${data.aws_dynamodb_table.maersk_route_danger_categories.range_key}"
 
   item = <<ITEM
 { 
@@ -1811,7 +1782,6 @@ ITEM
 resource "aws_dynamodb_table_item" "maersk_route_danger_categories29" {
   table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
   hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-  range_key  = "${data.aws_dynamodb_table.maersk_route_danger_categories.range_key}"
 
   item = <<ITEM
 { 
@@ -1831,7 +1801,6 @@ ITEM
 resource "aws_dynamodb_table_item" "maersk_route_danger_categories30" {
   table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
   hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-  range_key  = "${data.aws_dynamodb_table.maersk_route_danger_categories.range_key}"
 
   item = <<ITEM
 { 
@@ -1851,7 +1820,6 @@ ITEM
 resource "aws_dynamodb_table_item" "maersk_route_danger_categories31" {
   table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
   hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-  range_key  = "${data.aws_dynamodb_table.maersk_route_danger_categories.range_key}"
 
   item = <<ITEM
 { 
@@ -1871,7 +1839,6 @@ ITEM
 resource "aws_dynamodb_table_item" "maersk_route_danger_categories32" {
   table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
   hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-  range_key  = "${data.aws_dynamodb_table.maersk_route_danger_categories.range_key}"
 
   item = <<ITEM
 { 
@@ -1891,7 +1858,6 @@ ITEM
 resource "aws_dynamodb_table_item" "maersk_route_danger_categories33" {
   table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
   hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-  range_key  = "${data.aws_dynamodb_table.maersk_route_danger_categories.range_key}"
 
   item = <<ITEM
 { 
@@ -1911,7 +1877,6 @@ ITEM
 resource "aws_dynamodb_table_item" "maersk_route_danger_categories34" {
   table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
   hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-  range_key  = "${data.aws_dynamodb_table.maersk_route_danger_categories.range_key}"
 
   item = <<ITEM
 { 
@@ -1931,7 +1896,6 @@ ITEM
 resource "aws_dynamodb_table_item" "maersk_route_danger_categories35" {
   table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
   hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-  range_key  = "${data.aws_dynamodb_table.maersk_route_danger_categories.range_key}"
 
   item = <<ITEM
 { 
@@ -1951,7 +1915,6 @@ ITEM
 resource "aws_dynamodb_table_item" "maersk_route_danger_categories36" {
   table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
   hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-  range_key  = "${data.aws_dynamodb_table.maersk_route_danger_categories.range_key}"
 
   item = <<ITEM
 { 
@@ -1971,7 +1934,6 @@ ITEM
 resource "aws_dynamodb_table_item" "maersk_route_danger_categories37" {
   table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
   hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-  range_key  = "${data.aws_dynamodb_table.maersk_route_danger_categories.range_key}"
 
   item = <<ITEM
 { 
@@ -1991,7 +1953,6 @@ ITEM
 resource "aws_dynamodb_table_item" "maersk_route_danger_categories38" {
   table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
   hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-  range_key  = "${data.aws_dynamodb_table.maersk_route_danger_categories.range_key}"
 
   item = <<ITEM
 { 
@@ -2011,7 +1972,6 @@ ITEM
 resource "aws_dynamodb_table_item" "maersk_route_danger_categories39" {
   table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
   hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-  range_key  = "${data.aws_dynamodb_table.maersk_route_danger_categories.range_key}"
 
   item = <<ITEM
 { 
@@ -2031,7 +1991,6 @@ ITEM
 resource "aws_dynamodb_table_item" "maersk_route_danger_categories40" {
   table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
   hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-  range_key  = "${data.aws_dynamodb_table.maersk_route_danger_categories.range_key}"
 
   item = <<ITEM
 {
@@ -2051,7 +2010,6 @@ ITEM
 resource "aws_dynamodb_table_item" "maersk_route_danger_categories41" {
   table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
   hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-  range_key  = "${data.aws_dynamodb_table.maersk_route_danger_categories.range_key}"
 
   item = <<ITEM
 { 
@@ -2071,7 +2029,6 @@ ITEM
 resource "aws_dynamodb_table_item" "maersk_route_danger_categories42" {
   table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
   hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-  range_key  = "${data.aws_dynamodb_table.maersk_route_danger_categories.range_key}"
 
   item = <<ITEM
 {
@@ -2091,7 +2048,6 @@ ITEM
 resource "aws_dynamodb_table_item" "maersk_route_danger_categories43" {
   table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
   hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-  range_key  = "${data.aws_dynamodb_table.maersk_route_danger_categories.range_key}"
 
   item = <<ITEM
 { 
@@ -2111,7 +2067,6 @@ ITEM
 resource "aws_dynamodb_table_item" "maersk_route_danger_categories44" {
   table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
   hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-  range_key  = "${data.aws_dynamodb_table.maersk_route_danger_categories.range_key}"
 
   item = <<ITEM
 { 
@@ -2131,7 +2086,6 @@ ITEM
 resource "aws_dynamodb_table_item" "maersk_route_danger_categories45" {
   table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
   hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-  range_key  = "${data.aws_dynamodb_table.maersk_route_danger_categories.range_key}"
 
   item = <<ITEM
 { 
@@ -2151,7 +2105,6 @@ ITEM
 resource "aws_dynamodb_table_item" "maersk_route_danger_categories46" {
   table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
   hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-  range_key  = "${data.aws_dynamodb_table.maersk_route_danger_categories.range_key}"
 
   item = <<ITEM
 { 
@@ -2171,7 +2124,6 @@ ITEM
 resource "aws_dynamodb_table_item" "maersk_route_danger_categories47" {
   table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
   hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-  range_key  = "${data.aws_dynamodb_table.maersk_route_danger_categories.range_key}"
 
   item = <<ITEM
 { 
@@ -2191,7 +2143,6 @@ ITEM
 resource "aws_dynamodb_table_item" "maersk_route_danger_categories48" {
   table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
   hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-  range_key  = "${data.aws_dynamodb_table.maersk_route_danger_categories.range_key}"
 
   item = <<ITEM
 { 
@@ -2211,7 +2162,6 @@ ITEM
 resource "aws_dynamodb_table_item" "maersk_route_danger_categories49" {
   table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
   hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-  range_key  = "${data.aws_dynamodb_table.maersk_route_danger_categories.range_key}"
 
   item = <<ITEM
 { 
@@ -2231,7 +2181,6 @@ ITEM
 resource "aws_dynamodb_table_item" "maersk_route_danger_categories50" {
   table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
   hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-  range_key  = "${data.aws_dynamodb_table.maersk_route_danger_categories.range_key}"
 
   item = <<ITEM
 { 
