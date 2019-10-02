@@ -46,6 +46,7 @@ module "populate_forecastweatherelement" {
   table_package_subscr_name       = "${module.maersk_package_subscriptions.table_name}"
   table_tenant_reg_name           = "${module.tenant_registrations.table_name}"
   table_forecastweatherelement_v2 = "${module.maersk_forecastweatherelement_v2.table_name}"
+  table_route_danger_categories   = "${module.maersk_route_danger_categories.table_name}"
 }
 
 module "maersk_sender_handle_subscriptions" {
@@ -101,11 +102,20 @@ module "maersk_route_jobs" {
   tags = "${var.tags}"
 }
 
-module "maersk_danger_categories" {
+#module "maersk_danger_categories" {
+#  source        = "./modules/dynamodb"
+#  name          = "${var.prefix}_maersk_danger_categories"
+#  hash_key      = "Id"
+#  hash_key_type = "S"
+#
+#  tags = "${var.tags}"
+#}
+
+module "maersk_route_danger_categories" {
   source        = "./modules/dynamodb"
-  name          = "${var.prefix}_maersk_danger_categories"
+  name          = "${var.prefix}_maersk_route_danger_categories"
   hash_key      = "Id"
-  hash_key_type = "S"
+  hash_key_type = "N"
 
   tags = "${var.tags}"
 }
