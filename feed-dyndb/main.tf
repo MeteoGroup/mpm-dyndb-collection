@@ -10,9 +10,9 @@ data "aws_dynamodb_table" "table_tenant_registrations" {
   name = "${var.table_tenant_reg_name}"
 }
 
-#data "aws_dynamodb_table" "maersk_route_danger_categories" {
-#  name = "${var.table_route_danger_categories}"
-#}
+data "aws_dynamodb_table" "maersk_route_danger_categories" {
+  name = "${var.table_route_danger_categories}"
+}
 
 resource "aws_dynamodb_table_item" "table_tenant_registrations" {
   table_name = "${data.aws_dynamodb_table.table_tenant_registrations.name}"
@@ -1227,971 +1227,971 @@ ITEM
   }
 }
 
-#resource "aws_dynamodb_table_item" "maersk_route_danger_categories0" {
-#  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
-#  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-#
-#  item = <<ITEM
-#{
-#  "Id": { "N": "0" },
-#  "Code": { "N": "42" },
-#  "ClassCode": { "S": "DEPARE" },
-#  "Name": { "S": "Depth area" },
-#  "Severity": { "N": "4" }
-#}
-#ITEM
-#
-#  lifecycle {
-#    ignore_changes = ["item"]
-#  }
-#}
-#
-#resource "aws_dynamodb_table_item" "maersk_route_danger_categories1" {
-#  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
-#  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-#
-#  item = <<ITEM
-#{
-#  "Id": { "N": "1" }, 
-#  "Code": { "N": "46" }, 
-#  "ClassCode": { "S": "DRGARE" }, 
-#  "Name": { "S": "Dredged area" }, 
-#  "Severity": { "N": "4" }
-#}
-#ITEM
-#
-#  lifecycle {
-#    ignore_changes = ["item"]
-#  }
-#}
-#
-#resource "aws_dynamodb_table_item" "maersk_route_danger_categories2" {
-#  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
-#  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-#
-#  item = <<ITEM
-#{ 
-#  "Id": { "N": "2" },
-#  "Code": { "N": "57" },
-#  "ClassCode": { "S": "FLODOC" },
-#  "Name": { "S": "Floating dock" },
-#  "Severity": { "N": "2" }
-#}
-#ITEM
-#
-#  lifecycle {
-#    ignore_changes = ["item"]
-#  }
-#}
-#
-#resource "aws_dynamodb_table_item" "maersk_route_danger_categories3" {
-#  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
-#  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-#
-#  item = <<ITEM
-#{ 
-#  "Id": { "N": "3" }, 
-#  "Code": { "N": "65" }, 
-#  "ClassCode": { "S": "HULKES" }, 
-#  "Name": { "S": "Hulk" }, 
-#  "Severity": { "N": "4" }
-#}
-#ITEM
-#
-#  lifecycle {
-#    ignore_changes = ["item"]
-#  }
-#}
-#
-#resource "aws_dynamodb_table_item" "maersk_route_danger_categories4" {
-#  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
-#  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-#
-#  item = <<ITEM
-#{ 
-#  "Id": { "N": "4" },  
-#  "Code": { "N": "71" },
-#  "ClassCode": { "S": "LNDARE" },
-#  "Name": { "S": "Land area" },
-#  "Severity": { "N": "4" }
-#}
-#ITEM
-#
-#  lifecycle {
-#    ignore_changes = ["item"]
-#  }
-#}
-#
-#resource "aws_dynamodb_table_item" "maersk_route_danger_categories5" {
-#  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
-#  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-#
-#  item = <<ITEM
-#{ 
-#  "Id": { "N": "5" }, 
-#  "Code": { "N": "95" }, 
-#  "ClassCode": { "S": "PONTON" }, 
-#  "Name": { "S": "Pontoon" }, 
-#  "Severity": { "N": "4" }
-#}
-#ITEM
-#
-#  lifecycle {
-#    ignore_changes = ["item"]
-#  }
-#}
-#
-#resource "aws_dynamodb_table_item" "maersk_route_danger_categories6" {
-#  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
-#  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-#
-#  item = <<ITEM
-#{ 
-#  "Id": { "N": "6" }, 
-#  "Code": { "N": "154" }, 
-#  "ClassCode": { "S": "UNSARE" }, 
-#  "Name": { "S": "Unsurveyed area" }, 
-#  "Severity": { "N": "4" }
-#}
-#ITEM
-#
-#  lifecycle {
-#    ignore_changes = ["item"]
-#  }
-#}
-#
-#resource "aws_dynamodb_table_item" "maersk_route_danger_categories7" {
-#  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
-#  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-#
-#  item = <<ITEM
-#{ 
-#  "Id": { "N": "7" }, 
-#  "Code": { "N": "122" }, 
-#  "ClassCode": { "S": "SLCONS" }, 
-#  "Name": { "S": "Shoreline construction" }, 
-#  "Severity": { "N": "4" }
-#}
-#ITEM
-#
-#  lifecycle {
-#    ignore_changes = ["item"]
-#  }
-#}
-#
-#resource "aws_dynamodb_table_item" "maersk_route_danger_categories8" {
-#  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
-#  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-#
-#  item = <<ITEM
-#{ 
-#  "Id": { "N": "100" }, 
-#  "Code": { "N": "5" }, 
-#  "ClassCode": { "S": "BCNCAR" }, 
-#  "Name": { "S": "Beacon, cardinal" }, 
-#  "Severity": { "N": "4" }
-#}
-#ITEM
-#
-#  lifecycle {
-#    ignore_changes = ["item"]
-#  }
-#}
-#
-#resource "aws_dynamodb_table_item" "maersk_route_danger_categories9" {
-#  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
-#  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-#
-#  item = <<ITEM
-#{ 
-#  "Id": { "N": "101" }, 
-#  "Code": { "N": "6" }, 
-#  "ClassCode": { "S": "BCNISD" }, 
-#  "Name": { "S": "Beacon, isolated danger" }, 
-#  "Severity": { "N": "4" }
-#}
-#ITEM
-#
-#  lifecycle {
-#    ignore_changes = ["item"]
-#  }
-#}
-#
-#resource "aws_dynamodb_table_item" "maersk_route_danger_categories10" {
-#  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
-#  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-#
-#  item = <<ITEM
-#{ 
-#  "Id": { "N": "102" }, 
-#  "Code": { "N": "7" }, 
-#  "ClassCode": { "S": "BCNLAT" }, 
-#  "Name": { "S": "Beacon, lateral" }, 
-#  "Severity": { "N": "4" }
-#}
-#ITEM
-#
-#  lifecycle {
-#    ignore_changes = ["item"]
-#  }
-#}
-#
-#resource "aws_dynamodb_table_item" "maersk_route_danger_categories11" {
-#  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
-#  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-#
-#  item = <<ITEM
-#{ 
-#  "Id": { "N": "103" }, 
-#  "Code": { "N": "8" }, 
-#  "ClassCode": { "S": "BCNSAW" }, 
-#  "Name": { "S": "Beacon, safe water" }, 
-#  "Severity": { "N": "4" }
-#}
-#ITEM
-#
-#  lifecycle {
-#    ignore_changes = ["item"]
-#  }
-#}
-#
-#resource "aws_dynamodb_table_item" "maersk_route_danger_categories12" {
-#  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
-#  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-#
-#  item = <<ITEM
-#{ 
-#  "Id": { "N": "104" }, 
-#  "Code": { "N": "9" }, 
-#  "ClassCode": { "S": "BCNSPP" }, 
-#  "Name": { "S": "Beacon, special purpose/general" }, 
-#  "Severity": { "N": "4" }
-#}
-#ITEM
-#
-#  lifecycle {
-#    ignore_changes = ["item"]
-#  }
-#}
-#
-#resource "aws_dynamodb_table_item" "maersk_route_danger_categories13" {
-#  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
-#  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-#
-#  item = <<ITEM
-#{ 
-#  "Id": { "N": "105" }, 
-#  "Code": { "N": "14" }, 
-#  "ClassCode": { "S": "BOYCAR" }, 
-#  "Name": { "S": "Buoy, cardinal" }, 
-#  "Severity": { "N": "4" }
-#}
-#ITEM
-#
-#  lifecycle {
-#    ignore_changes = ["item"]
-#  }
-#}
-#
-#resource "aws_dynamodb_table_item" "maersk_route_danger_categories14" {
-#  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
-#  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-#
-#  item = <<ITEM
-#{ 
-#  "Id": { "N": "106" }, 
-#  "Code": { "N": "15" }, 
-#  "ClassCode": { "S": "BOYINB" }, 
-#  "Name": { "S": "Buoy, installation" }, 
-#  "Severity": { "N": "4" }
-#}
-#ITEM
-#
-#  lifecycle {
-#    ignore_changes = ["item"]
-#  }
-#}
-#
-#resource "aws_dynamodb_table_item" "maersk_route_danger_categories15" {
-#  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
-#  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-#
-#  item = <<ITEM
-#{ 
-#  "Id": { "N": "107" }, 
-#  "Code": { "N": "16" }, 
-#  "ClassCode": { "S": "BOYISD" }, 
-#  "Name": { "S": "Buoy, isolated danger" }, 
-#  "Severity": { "N": "4" }
-#}
-#ITEM
-#
-#  lifecycle {
-#    ignore_changes = ["item"]
-#  }
-#}
-#
-#resource "aws_dynamodb_table_item" "maersk_route_danger_categories16" {
-#  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
-#  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-#
-#  item = <<ITEM
-#{ 
-#  "Id": { "N": "108" }, 
-#  "Code": { "N": "17" }, 
-#  "ClassCode": { "S": "BOYLAT" }, 
-#  "Name": { "S": "Buoy, lateral" }, 
-#  "Severity": { "N": "4" }
-#}
-#ITEM
-#
-#  lifecycle {
-#    ignore_changes = ["item"]
-#  }
-#}
-#
-#resource "aws_dynamodb_table_item" "maersk_route_danger_categories17" {
-#  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
-#  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-#
-#  item = <<ITEM
-#{ 
-#  "Id": { "N": "109" }, 
-#  "Code": { "N": "18" }, 
-#  "ClassCode": { "S": "BOYSAW" }, 
-#  "Name": { "S": "Buoy, safe water" }, 
-#  "Severity": { "N": "4" }
-#}
-#ITEM
-#
-#  lifecycle {
-#    ignore_changes = ["item"]
-#  }
-#}
-#
-#resource "aws_dynamodb_table_item" "maersk_route_danger_categories18" {
-#  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
-#  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-#
-#  item = <<ITEM
-#{ 
-#  "Id": { "N": "110" }, 
-#  "Code": { "N": "19" }, 
-#  "ClassCode": { "S": "BOYSPP" }, 
-#  "Name": { "S": "Buoy, special purpose/general" }, 
-#  "Severity": { "N": "4" }
-#}
-#ITEM
-#
-#  lifecycle {
-#    ignore_changes = ["item"]
-#  }
-#}
-#
-#resource "aws_dynamodb_table_item" "maersk_route_danger_categories19" {
-#  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
-#  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-#
-#  item = <<ITEM
-#{ 
-#  "Id": { "N": "111" }, 
-#  "Code": { "N": "11" }, 
-#  "ClassCode": { "S": "BRIDGE" }, 
-#  "Name": { "S": "Bridge" }, 
-#  "Severity": { "N": "4" }
-#}
-#ITEM
-#
-#  lifecycle {
-#    ignore_changes = ["item"]
-#  }
-#}
-#
-#resource "aws_dynamodb_table_item" "maersk_route_danger_categories20" {
-#  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
-#  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-#
-#  item = <<ITEM
-#{ 
-#  "Id": { "N": "112" }, 
-#  "Code": { "N": "21" }, 
-#  "ClassCode": { "S": "CBLOHD" }, 
-#  "Name": { "S": "Cable, overhead" }, 
-#  "Severity": { "N": "4" }
-#}
-#ITEM
-#
-#  lifecycle {
-#    ignore_changes = ["item"]
-#  }
-#}
-#
-#resource "aws_dynamodb_table_item" "maersk_route_danger_categories21" {
-#  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
-#  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-#
-#  item = <<ITEM
-#{ 
-#  "Id": { "N": "113" }, 
-#  "Code": { "N": "39" }, 
-#  "ClassCode": { "S": "DAYMAR" }, 
-#  "Name": { "S": "Daymark" }, 
-#  "Severity": { "N": "4" }
-#}
-#ITEM
-#
-#  lifecycle {
-#    ignore_changes = ["item"]
-#  }
-#}
-#
-#resource "aws_dynamodb_table_item" "maersk_route_danger_categories22" {
-#  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
-#  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-#
-#  item = <<ITEM
-#{ 
-#  "Id": { "N": "114" }, 
-#  "Code": { "N": "93" }, 
-#  "ClassCode": { "S": "PIPOHD" }, 
-#  "Name": { "S": "Pipeline, overhead" }, 
-#  "Severity": { "N": "4" }
-#}
-#ITEM
-#
-#  lifecycle {
-#    ignore_changes = ["item"]
-#  }
-#}
-#
-#resource "aws_dynamodb_table_item" "maersk_route_danger_categories23" {
-#  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
-#  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-#
-#  item = <<ITEM
-#{ 
-#  "Id": { "N": "115" }, 
-#  "Code": { "N": "34" }, 
-#  "ClassCode": { "S": "CONVYR" }, 
-#  "Name": { "S": "Conveyor" }, 
-#  "Severity": { "N": "4" }
-#}
-#ITEM
-#
-#  lifecycle {
-#    ignore_changes = ["item"]
-#  }
-#}
-#
-#resource "aws_dynamodb_table_item" "maersk_route_danger_categories24" {
-#  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
-#  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-#
-#  item = <<ITEM
-#{ 
-#  "Id": { "N": "116" }, 
-#  "Code": { "N": "84" }, 
-#  "ClassCode": { "S": "MORFAC" }, 
-#  "Name": { "S": "Mooring/Warping facility" }, 
-#  "Severity": { "N": "4" }
-#}
-#ITEM
-#
-#  lifecycle {
-#    ignore_changes = ["item"]
-#  }
-#}
-#
-#resource "aws_dynamodb_table_item" "maersk_route_danger_categories25" {
-#  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
-#  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-#
-#  item = <<ITEM
-#{ 
-#  "Id": { "N": "117" }, 
-#  "Code": { "N": "163" }, 
-#  "ClassCode": { "S": "NEWOBJ" }, 
-#  "Name": { "S": "New object" }, 
-#  "Severity": { "N": "4" }
-#}
-#ITEM
-#
-#  lifecycle {
-#    ignore_changes = ["item"]
-#  }
-#}
-#
-#resource "aws_dynamodb_table_item" "maersk_route_danger_categories26" {
-#  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
-#  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-#
-#  item = <<ITEM
-#{ 
-#  "Id": { "N": "118" }, 
-#  "Code": { "N": "55" }, 
-#  "ClassCode": { "S": "FSHFAC" }, 
-#  "Name": { "S": "Fishing facility" }, 
-#  "Severity": { "N": "4" }
-#}
-#ITEM
-#
-#  lifecycle {
-#    ignore_changes = ["item"]
-#  }
-#}
-#
-#resource "aws_dynamodb_table_item" "maersk_route_danger_categories27" {
-#  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
-#  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-#
-#  item = <<ITEM
-#{ 
-#  "Id": { "N": "119" }, 
-#  "Code": { "N": "66" }, 
-#  "ClassCode": { "S": "ICEARE" }, 
-#  "Name": { "S": "Ice area" }, 
-#  "Severity": { "N": "4" }
-#}
-#ITEM
-#
-#  lifecycle {
-#    ignore_changes = ["item"]
-#  }
-#}
-#
-#resource "aws_dynamodb_table_item" "maersk_route_danger_categories28" {
-#  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
-#  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-#
-#  item = <<ITEM
-#{ 
-#  "Id": { "N": "120" }, 
-#  "Code": { "N": "76" }, 
-#  "ClassCode": { "S": "LITFLT" }, 
-#  "Name": { "S": "Light float" }, 
-#  "Severity": { "N": "4" }
-#}
-#ITEM
-#
-#  lifecycle {
-#    ignore_changes = ["item"]
-#  }
-#}
-#
-#resource "aws_dynamodb_table_item" "maersk_route_danger_categories29" {
-#  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
-#  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-#
-#  item = <<ITEM
-#{ 
-#  "Id": { "N": "121" }, 
-#  "Code": { "N": "77" }, 
-#  "ClassCode": { "S": "LITVES" }, 
-#  "Name": { "S": "Light vessel" }, 
-#  "Severity": { "N": "4" }
-#}
-#ITEM
-#
-#  lifecycle {
-#    ignore_changes = ["item"]
-#  }
-#}
-#
-#resource "aws_dynamodb_table_item" "maersk_route_danger_categories30" {
-#  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
-#  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-#
-#  item = <<ITEM
-#{ 
-#  "Id": { "N": "122" }, 
-#  "Code": { "N": "80" }, 
-#  "ClassCode": { "S": "LOGPON" }, 
-#  "Name": { "S": "Log pond" }, 
-#  "Severity": { "N": "4" }
-#}
-#ITEM
-#
-#  lifecycle {
-#    ignore_changes = ["item"]
-#  }
-#}
-#
-#resource "aws_dynamodb_table_item" "maersk_route_danger_categories31" {
-#  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
-#  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-#
-#  item = <<ITEM
-#{ 
-#  "Id": { "N": "123" }, 
-#  "Code": { "N": "87" }, 
-#  "ClassCode": { "S": "OFSPLF" }, 
-#  "Name": { "S": "Offshore platform" }, 
-#  "Severity": { "N": "4" }
-#}
-#ITEM
-#
-#  lifecycle {
-#    ignore_changes = ["item"]
-#  }
-#}
-#
-#resource "aws_dynamodb_table_item" "maersk_route_danger_categories32" {
-#  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
-#  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-#
-#  item = <<ITEM
-#{ 
-#  "Id": { "N": "124" }, 
-#  "Code": { "N": "89" }, 
-#  "ClassCode": { "S": "OILBAR" }, 
-#  "Name": { "S": "Oil barrier" }, 
-#  "Severity": { "N": "4" }
-#}
-#ITEM
-#
-#  lifecycle {
-#    ignore_changes = ["item"]
-#  }
-#}
-#
-#resource "aws_dynamodb_table_item" "maersk_route_danger_categories33" {
-#  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
-#  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-#
-#  item = <<ITEM
-#{ 
-#  "Id": { "N": "125" }, 
-#  "Code": { "N": "90" }, 
-#  "ClassCode": { "S": "PILPNT" }, 
-#  "Name": { "S": "Pile" }, 
-#  "Severity": { "N": "4" }
-#}
-#ITEM
-#
-#  lifecycle {
-#    ignore_changes = ["item"]
-#  }
-#}
-#
-#resource "aws_dynamodb_table_item" "maersk_route_danger_categories34" {
-#  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
-#  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-#
-#  item = <<ITEM
-#{ 
-#  "Id": { "N": "126" }, 
-#  "Code": { "N": "98" }, 
-#  "ClassCode": { "S": "PYLONS" }, 
-#  "Name": { "S": "Pylon/bridge support" }, 
-#  "Severity": { "N": "4" }
-#}
-#ITEM
-#
-#  lifecycle {
-#    ignore_changes = ["item"]
-#  }
-#}
-#
-#resource "aws_dynamodb_table_item" "maersk_route_danger_categories35" {
-#  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
-#  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-#
-#  item = <<ITEM
-#{ 
-#  "Id": { "N": "127" }, 
-#  "Code": { "N": "86" }, 
-#  "ClassCode": { "S": "OBSTRN" }, 
-#  "Name": { "S": "Obstruction" }, 
-#  "Severity": { "N": "4" }
-#}
-#ITEM
-#
-#  lifecycle {
-#    ignore_changes = ["item"]
-#  }
-#}
-#
-#resource "aws_dynamodb_table_item" "maersk_route_danger_categories36" {
-#  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
-#  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-#
-#  item = <<ITEM
-#{ 
-#  "Id": { "N": "128" }, 
-#  "Code": { "N": "153" }, 
-#  "ClassCode": { "S": "UWTROC" }, 
-#  "Name": { "S": "Underwater/awash rock" }, 
-#  "Severity": { "N": "4" }
-#}
-#ITEM
-#
-#  lifecycle {
-#    ignore_changes = ["item"]
-#  }
-#}
-#
-#resource "aws_dynamodb_table_item" "maersk_route_danger_categories37" {
-#  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
-#  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-#
-#  item = <<ITEM
-#{ 
-#  "Id": { "N": "129" }, 
-#  "Code": { "N": "159" }, 
-#  "ClassCode": { "S": "WRECKS" },
-#  "Name": { "S": "Wreck" }, 
-#  "Severity": { "N": "4" }
-#}
-#ITEM
-#
-#  lifecycle {
-#    ignore_changes = ["item"]
-#  }
-#}
-#
-#resource "aws_dynamodb_table_item" "maersk_route_danger_categories38" {
-#  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
-#  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-#
-#  item = <<ITEM
-#{ 
-#  "Id": { "N": "130" }, 
-#  "Code": { "N": "129" }, 
-#  "ClassCode": { "S": "SOUNDG" }, 
-#  "Name": { "S": "Sounding" }, 
-#  "Severity": { "N": "4" }
-#}
-#ITEM
-#
-#  lifecycle {
-#    ignore_changes = ["item"]
-#  }
-#}
-#
-#resource "aws_dynamodb_table_item" "maersk_route_danger_categories39" {
-#  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
-#  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-#
-#  item = <<ITEM
-#{ 
-#  "Id": { "N": "200" },
-#  "Code": { "N": "150" }, 
-#  "ClassCode": { "S": "TSEZNE" }, 
-#  "Name": { "S": "Traffic separation zone" }, 
-#  "Severity": { "N": "1" }
-#}
-#ITEM
-#
-#  lifecycle {
-#    ignore_changes = ["item"]
-#  }
-#}
-#
-#resource "aws_dynamodb_table_item" "maersk_route_danger_categories40" {
-#  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
-#  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-#
-#  item = <<ITEM
-#{
-#  "Id": { "N": "201" }, 
-#  "Code": { "N": "68" }, 
-#  "ClassCode": { "S": "ISTZNE" }, 
-#  "Name": { "S": "Inshore traffic zone" }, 
-#  "Severity": { "N": "2" }
-#}
-#ITEM
-#
-#  lifecycle {
-#    ignore_changes = ["item"]
-#  }
-#}
-#
-#resource "aws_dynamodb_table_item" "maersk_route_danger_categories41" {
-#  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
-#  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-#
-#  item = <<ITEM
-#{ 
-#  "Id": { "N": "202" }, 
-#  "Code": { "N": "112" }, 
-#  "ClassCode": { "S": "RESARE" }, 
-#  "Name": { "S": "Restricted area" }, 
-#  "Severity": { "N": "4" }
-#}
-#ITEM
-#
-#  lifecycle {
-#    ignore_changes = ["item"]
-#  }
-#}
-#
-#resource "aws_dynamodb_table_item" "maersk_route_danger_categories42" {
-#  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
-#  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-#
-#  item = <<ITEM
-#{
-#  "Id": { "N": "203" }, 
-#  "Code": { "N": "27" }, 
-#  "ClassCode": { "S": "CTNARE" }, 
-#  "Name": { "S": "Caution area" }, 
-#  "Severity": { "N": "2" }
-#}
-#ITEM
-#
-#  lifecycle {
-#    ignore_changes = ["item"]
-#  }
-#}
-#
-#resource "aws_dynamodb_table_item" "maersk_route_danger_categories43" {
-#  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
-#  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-#
-#  item = <<ITEM
-#{ 
-#  "Id": { "N": "204" }, 
-#  "Code": { "N": "88" }, 
-#  "ClassCode": { "S": "OSPARE" }, 
-#  "Name": { "S": "Offshore production area" }, 
-#  "Severity": { "N": "4" }
-#}
-#ITEM
-#
-#  lifecycle {
-#    ignore_changes = ["item"]
-#  }
-#}
-#
-#resource "aws_dynamodb_table_item" "maersk_route_danger_categories44" {
-#  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
-#  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-#
-#  item = <<ITEM
-#{ 
-#  "Id": { "N": "205" }, 
-#  "Code": { "N": "112" }, 
-#  "ClassCode": { "S": "RESARE" }, 
-#  "Name": { "S": "Restricted area" }, 
-#  "Severity": { "N": "4" }
-#}
-#ITEM
-#
-#  lifecycle {
-#    ignore_changes = ["item"]
-#  }
-#}
-#
-#resource "aws_dynamodb_table_item" "maersk_route_danger_categories45" {
-#  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
-#  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-#
-#  item = <<ITEM
-#{ 
-#  "Id": { "N": "206" }, 
-#  "Code": { "N": "83" }, 
-#  "ClassCode": { "S": "MIPARE" }, 
-#  "Name": { "S": "Military practice area" }, 
-#  "Severity": { "N": "2" }
-#}
-#ITEM
-#
-#  lifecycle {
-#    ignore_changes = ["item"]
-#  }
-#}
-#
-#resource "aws_dynamodb_table_item" "maersk_route_danger_categories46" {
-#  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
-#  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-#
-#  item = <<ITEM
-#{ 
-#  "Id": { "N": "207" }, 
-#  "Code": { "N": "120" }, 
-#  "ClassCode": { "S": "SPLARE" }, 
-#  "Name": { "S": "Sea-plane landing area" }, 
-#  "Severity": { "N": "4" }
-#}
-#ITEM
-#
-#  lifecycle {
-#    ignore_changes = ["item"]
-#  }
-#}
-#
-#resource "aws_dynamodb_table_item" "maersk_route_danger_categories47" {
-#  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
-#  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-#
-#  item = <<ITEM
-#{ 
-#  "Id": { "N": "208" }, 
-#  "Code": { "N": "133" }, 
-#  "ClassCode": { "S": "SUBTLN" }, 
-#  "Name": { "S": "Submarine transit lane" }, 
-#  "Severity": { "N": "2" }
-#}
-#ITEM
-#
-#  lifecycle {
-#    ignore_changes = ["item"]
-#  }
-#}
-#
-#resource "aws_dynamodb_table_item" "maersk_route_danger_categories48" {
-#  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
-#  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-#
-#  item = <<ITEM
-#{ 
-#  "Id": { "N": "209" }, 
-#  "Code": { "N": "4" }, 
-#  "ClassCode": { "S": "ACHARE" },
-#  "Name": { "S": "Anchorage area" }, 
-#  "Severity": { "N": "2" }
-#}
-#ITEM
-#
-#  lifecycle {
-#    ignore_changes = ["item"]
-#  }
-#}
-#
-#resource "aws_dynamodb_table_item" "maersk_route_danger_categories49" {
-#  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
-#  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-#
-#  item = <<ITEM
-#{ 
-#  "Id": { "N": "210" }, 
-#  "Code": { "N": "82" }, 
-#  "ClassCode": { "S": "MARCUL" }, 
-#  "Name": { "S": "Marine farm/culture" }, 
-#  "Severity": { "N": "2" }
-#}
-#ITEM
-#
-#  lifecycle {
-#    ignore_changes = ["item"]
-#  }
-#}
-#
-#resource "aws_dynamodb_table_item" "maersk_route_danger_categories50" {
-#  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
-#  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
-#
-#  item = <<ITEM
-#{ 
-#  "Id": { "N": "211" }, 
-#  "Code": { "N": "112" }, 
-#  "ClassCode": { "S": "RESARE" }, 
-#  "Name": { "S": "Restricted area" }, 
-#  "Severity": { "N": "4" }
-#}
-#ITEM
-#
-#  lifecycle {
-#    ignore_changes = ["item"]
-#  }
-#}
+resource "aws_dynamodb_table_item" "maersk_route_danger_categories0" {
+  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
+  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
+
+  item = <<ITEM
+{
+  "Id": { "N": "0" },
+  "Code": { "N": "42" },
+  "ClassCode": { "S": "DEPARE" },
+  "Name": { "S": "Depth area" },
+  "Severity": { "N": "4" }
+}
+ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
+}
+
+resource "aws_dynamodb_table_item" "maersk_route_danger_categories1" {
+  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
+  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
+
+  item = <<ITEM
+{
+  "Id": { "N": "1" }, 
+  "Code": { "N": "46" }, 
+  "ClassCode": { "S": "DRGARE" }, 
+  "Name": { "S": "Dredged area" }, 
+  "Severity": { "N": "4" }
+}
+ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
+}
+
+resource "aws_dynamodb_table_item" "maersk_route_danger_categories2" {
+  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
+  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
+
+  item = <<ITEM
+{ 
+  "Id": { "N": "2" },
+  "Code": { "N": "57" },
+  "ClassCode": { "S": "FLODOC" },
+  "Name": { "S": "Floating dock" },
+  "Severity": { "N": "2" }
+}
+ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
+}
+
+resource "aws_dynamodb_table_item" "maersk_route_danger_categories3" {
+  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
+  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
+
+  item = <<ITEM
+{ 
+  "Id": { "N": "3" }, 
+  "Code": { "N": "65" }, 
+  "ClassCode": { "S": "HULKES" }, 
+  "Name": { "S": "Hulk" }, 
+  "Severity": { "N": "4" }
+}
+ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
+}
+
+resource "aws_dynamodb_table_item" "maersk_route_danger_categories4" {
+  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
+  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
+
+  item = <<ITEM
+{ 
+  "Id": { "N": "4" },  
+  "Code": { "N": "71" },
+  "ClassCode": { "S": "LNDARE" },
+  "Name": { "S": "Land area" },
+  "Severity": { "N": "4" }
+}
+ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
+}
+
+resource "aws_dynamodb_table_item" "maersk_route_danger_categories5" {
+  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
+  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
+
+  item = <<ITEM
+{ 
+  "Id": { "N": "5" }, 
+  "Code": { "N": "95" }, 
+  "ClassCode": { "S": "PONTON" }, 
+  "Name": { "S": "Pontoon" }, 
+  "Severity": { "N": "4" }
+}
+ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
+}
+
+resource "aws_dynamodb_table_item" "maersk_route_danger_categories6" {
+  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
+  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
+
+  item = <<ITEM
+{ 
+  "Id": { "N": "6" }, 
+  "Code": { "N": "154" }, 
+  "ClassCode": { "S": "UNSARE" }, 
+  "Name": { "S": "Unsurveyed area" }, 
+  "Severity": { "N": "4" }
+}
+ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
+}
+
+resource "aws_dynamodb_table_item" "maersk_route_danger_categories7" {
+  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
+  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
+
+  item = <<ITEM
+{ 
+  "Id": { "N": "7" }, 
+  "Code": { "N": "122" }, 
+  "ClassCode": { "S": "SLCONS" }, 
+  "Name": { "S": "Shoreline construction" }, 
+  "Severity": { "N": "4" }
+}
+ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
+}
+
+resource "aws_dynamodb_table_item" "maersk_route_danger_categories8" {
+  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
+  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
+
+  item = <<ITEM
+{ 
+  "Id": { "N": "100" }, 
+  "Code": { "N": "5" }, 
+  "ClassCode": { "S": "BCNCAR" }, 
+  "Name": { "S": "Beacon, cardinal" }, 
+  "Severity": { "N": "4" }
+}
+ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
+}
+
+resource "aws_dynamodb_table_item" "maersk_route_danger_categories9" {
+  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
+  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
+
+  item = <<ITEM
+{ 
+  "Id": { "N": "101" }, 
+  "Code": { "N": "6" }, 
+  "ClassCode": { "S": "BCNISD" }, 
+  "Name": { "S": "Beacon, isolated danger" }, 
+  "Severity": { "N": "4" }
+}
+ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
+}
+
+resource "aws_dynamodb_table_item" "maersk_route_danger_categories10" {
+  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
+  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
+
+  item = <<ITEM
+{ 
+  "Id": { "N": "102" }, 
+  "Code": { "N": "7" }, 
+  "ClassCode": { "S": "BCNLAT" }, 
+  "Name": { "S": "Beacon, lateral" }, 
+  "Severity": { "N": "4" }
+}
+ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
+}
+
+resource "aws_dynamodb_table_item" "maersk_route_danger_categories11" {
+  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
+  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
+
+  item = <<ITEM
+{ 
+  "Id": { "N": "103" }, 
+  "Code": { "N": "8" }, 
+  "ClassCode": { "S": "BCNSAW" }, 
+  "Name": { "S": "Beacon, safe water" }, 
+  "Severity": { "N": "4" }
+}
+ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
+}
+
+resource "aws_dynamodb_table_item" "maersk_route_danger_categories12" {
+  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
+  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
+
+  item = <<ITEM
+{ 
+  "Id": { "N": "104" }, 
+  "Code": { "N": "9" }, 
+  "ClassCode": { "S": "BCNSPP" }, 
+  "Name": { "S": "Beacon, special purpose/general" }, 
+  "Severity": { "N": "4" }
+}
+ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
+}
+
+resource "aws_dynamodb_table_item" "maersk_route_danger_categories13" {
+  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
+  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
+
+  item = <<ITEM
+{ 
+  "Id": { "N": "105" }, 
+  "Code": { "N": "14" }, 
+  "ClassCode": { "S": "BOYCAR" }, 
+  "Name": { "S": "Buoy, cardinal" }, 
+  "Severity": { "N": "4" }
+}
+ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
+}
+
+resource "aws_dynamodb_table_item" "maersk_route_danger_categories14" {
+  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
+  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
+
+  item = <<ITEM
+{ 
+  "Id": { "N": "106" }, 
+  "Code": { "N": "15" }, 
+  "ClassCode": { "S": "BOYINB" }, 
+  "Name": { "S": "Buoy, installation" }, 
+  "Severity": { "N": "4" }
+}
+ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
+}
+
+resource "aws_dynamodb_table_item" "maersk_route_danger_categories15" {
+  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
+  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
+
+  item = <<ITEM
+{ 
+  "Id": { "N": "107" }, 
+  "Code": { "N": "16" }, 
+  "ClassCode": { "S": "BOYISD" }, 
+  "Name": { "S": "Buoy, isolated danger" }, 
+  "Severity": { "N": "4" }
+}
+ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
+}
+
+resource "aws_dynamodb_table_item" "maersk_route_danger_categories16" {
+  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
+  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
+
+  item = <<ITEM
+{ 
+  "Id": { "N": "108" }, 
+  "Code": { "N": "17" }, 
+  "ClassCode": { "S": "BOYLAT" }, 
+  "Name": { "S": "Buoy, lateral" }, 
+  "Severity": { "N": "4" }
+}
+ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
+}
+
+resource "aws_dynamodb_table_item" "maersk_route_danger_categories17" {
+  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
+  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
+
+  item = <<ITEM
+{ 
+  "Id": { "N": "109" }, 
+  "Code": { "N": "18" }, 
+  "ClassCode": { "S": "BOYSAW" }, 
+  "Name": { "S": "Buoy, safe water" }, 
+  "Severity": { "N": "4" }
+}
+ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
+}
+
+resource "aws_dynamodb_table_item" "maersk_route_danger_categories18" {
+  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
+  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
+
+  item = <<ITEM
+{ 
+  "Id": { "N": "110" }, 
+  "Code": { "N": "19" }, 
+  "ClassCode": { "S": "BOYSPP" }, 
+  "Name": { "S": "Buoy, special purpose/general" }, 
+  "Severity": { "N": "4" }
+}
+ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
+}
+
+resource "aws_dynamodb_table_item" "maersk_route_danger_categories19" {
+  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
+  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
+
+  item = <<ITEM
+{ 
+  "Id": { "N": "111" }, 
+  "Code": { "N": "11" }, 
+  "ClassCode": { "S": "BRIDGE" }, 
+  "Name": { "S": "Bridge" }, 
+  "Severity": { "N": "4" }
+}
+ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
+}
+
+resource "aws_dynamodb_table_item" "maersk_route_danger_categories20" {
+  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
+  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
+
+  item = <<ITEM
+{ 
+  "Id": { "N": "112" }, 
+  "Code": { "N": "21" }, 
+  "ClassCode": { "S": "CBLOHD" }, 
+  "Name": { "S": "Cable, overhead" }, 
+  "Severity": { "N": "4" }
+}
+ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
+}
+
+resource "aws_dynamodb_table_item" "maersk_route_danger_categories21" {
+  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
+  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
+
+  item = <<ITEM
+{ 
+  "Id": { "N": "113" }, 
+  "Code": { "N": "39" }, 
+  "ClassCode": { "S": "DAYMAR" }, 
+  "Name": { "S": "Daymark" }, 
+  "Severity": { "N": "4" }
+}
+ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
+}
+
+resource "aws_dynamodb_table_item" "maersk_route_danger_categories22" {
+  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
+  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
+
+  item = <<ITEM
+{ 
+  "Id": { "N": "114" }, 
+  "Code": { "N": "93" }, 
+  "ClassCode": { "S": "PIPOHD" }, 
+  "Name": { "S": "Pipeline, overhead" }, 
+  "Severity": { "N": "4" }
+}
+ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
+}
+
+resource "aws_dynamodb_table_item" "maersk_route_danger_categories23" {
+  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
+  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
+
+  item = <<ITEM
+{ 
+  "Id": { "N": "115" }, 
+  "Code": { "N": "34" }, 
+  "ClassCode": { "S": "CONVYR" }, 
+  "Name": { "S": "Conveyor" }, 
+  "Severity": { "N": "4" }
+}
+ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
+}
+
+resource "aws_dynamodb_table_item" "maersk_route_danger_categories24" {
+  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
+  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
+
+  item = <<ITEM
+{ 
+  "Id": { "N": "116" }, 
+  "Code": { "N": "84" }, 
+  "ClassCode": { "S": "MORFAC" }, 
+  "Name": { "S": "Mooring/Warping facility" }, 
+  "Severity": { "N": "4" }
+}
+ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
+}
+
+resource "aws_dynamodb_table_item" "maersk_route_danger_categories25" {
+  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
+  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
+
+  item = <<ITEM
+{ 
+  "Id": { "N": "117" }, 
+  "Code": { "N": "163" }, 
+  "ClassCode": { "S": "NEWOBJ" }, 
+  "Name": { "S": "New object" }, 
+  "Severity": { "N": "4" }
+}
+ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
+}
+
+resource "aws_dynamodb_table_item" "maersk_route_danger_categories26" {
+  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
+  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
+
+  item = <<ITEM
+{ 
+  "Id": { "N": "118" }, 
+  "Code": { "N": "55" }, 
+  "ClassCode": { "S": "FSHFAC" }, 
+  "Name": { "S": "Fishing facility" }, 
+  "Severity": { "N": "4" }
+}
+ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
+}
+
+resource "aws_dynamodb_table_item" "maersk_route_danger_categories27" {
+  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
+  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
+
+  item = <<ITEM
+{ 
+  "Id": { "N": "119" }, 
+  "Code": { "N": "66" }, 
+  "ClassCode": { "S": "ICEARE" }, 
+  "Name": { "S": "Ice area" }, 
+  "Severity": { "N": "4" }
+}
+ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
+}
+
+resource "aws_dynamodb_table_item" "maersk_route_danger_categories28" {
+  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
+  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
+
+  item = <<ITEM
+{ 
+  "Id": { "N": "120" }, 
+  "Code": { "N": "76" }, 
+  "ClassCode": { "S": "LITFLT" }, 
+  "Name": { "S": "Light float" }, 
+  "Severity": { "N": "4" }
+}
+ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
+}
+
+resource "aws_dynamodb_table_item" "maersk_route_danger_categories29" {
+  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
+  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
+
+  item = <<ITEM
+{ 
+  "Id": { "N": "121" }, 
+  "Code": { "N": "77" }, 
+  "ClassCode": { "S": "LITVES" }, 
+  "Name": { "S": "Light vessel" }, 
+  "Severity": { "N": "4" }
+}
+ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
+}
+
+resource "aws_dynamodb_table_item" "maersk_route_danger_categories30" {
+  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
+  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
+
+  item = <<ITEM
+{ 
+  "Id": { "N": "122" }, 
+  "Code": { "N": "80" }, 
+  "ClassCode": { "S": "LOGPON" }, 
+  "Name": { "S": "Log pond" }, 
+  "Severity": { "N": "4" }
+}
+ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
+}
+
+resource "aws_dynamodb_table_item" "maersk_route_danger_categories31" {
+  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
+  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
+
+  item = <<ITEM
+{ 
+  "Id": { "N": "123" }, 
+  "Code": { "N": "87" }, 
+  "ClassCode": { "S": "OFSPLF" }, 
+  "Name": { "S": "Offshore platform" }, 
+  "Severity": { "N": "4" }
+}
+ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
+}
+
+resource "aws_dynamodb_table_item" "maersk_route_danger_categories32" {
+  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
+  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
+
+  item = <<ITEM
+{ 
+  "Id": { "N": "124" }, 
+  "Code": { "N": "89" }, 
+  "ClassCode": { "S": "OILBAR" }, 
+  "Name": { "S": "Oil barrier" }, 
+  "Severity": { "N": "4" }
+}
+ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
+}
+
+resource "aws_dynamodb_table_item" "maersk_route_danger_categories33" {
+  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
+  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
+
+  item = <<ITEM
+{ 
+  "Id": { "N": "125" }, 
+  "Code": { "N": "90" }, 
+  "ClassCode": { "S": "PILPNT" }, 
+  "Name": { "S": "Pile" }, 
+  "Severity": { "N": "4" }
+}
+ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
+}
+
+resource "aws_dynamodb_table_item" "maersk_route_danger_categories34" {
+  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
+  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
+
+  item = <<ITEM
+{ 
+  "Id": { "N": "126" }, 
+  "Code": { "N": "98" }, 
+  "ClassCode": { "S": "PYLONS" }, 
+  "Name": { "S": "Pylon/bridge support" }, 
+  "Severity": { "N": "4" }
+}
+ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
+}
+
+resource "aws_dynamodb_table_item" "maersk_route_danger_categories35" {
+  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
+  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
+
+  item = <<ITEM
+{ 
+  "Id": { "N": "127" }, 
+  "Code": { "N": "86" }, 
+  "ClassCode": { "S": "OBSTRN" }, 
+  "Name": { "S": "Obstruction" }, 
+  "Severity": { "N": "4" }
+}
+ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
+}
+
+resource "aws_dynamodb_table_item" "maersk_route_danger_categories36" {
+  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
+  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
+
+  item = <<ITEM
+{ 
+  "Id": { "N": "128" }, 
+  "Code": { "N": "153" }, 
+  "ClassCode": { "S": "UWTROC" }, 
+  "Name": { "S": "Underwater/awash rock" }, 
+  "Severity": { "N": "4" }
+}
+ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
+}
+
+resource "aws_dynamodb_table_item" "maersk_route_danger_categories37" {
+  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
+  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
+
+  item = <<ITEM
+{ 
+  "Id": { "N": "129" }, 
+  "Code": { "N": "159" }, 
+  "ClassCode": { "S": "WRECKS" },
+  "Name": { "S": "Wreck" }, 
+  "Severity": { "N": "4" }
+}
+ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
+}
+
+resource "aws_dynamodb_table_item" "maersk_route_danger_categories38" {
+  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
+  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
+
+  item = <<ITEM
+{ 
+  "Id": { "N": "130" }, 
+  "Code": { "N": "129" }, 
+  "ClassCode": { "S": "SOUNDG" }, 
+  "Name": { "S": "Sounding" }, 
+  "Severity": { "N": "4" }
+}
+ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
+}
+
+resource "aws_dynamodb_table_item" "maersk_route_danger_categories39" {
+  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
+  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
+
+  item = <<ITEM
+{ 
+  "Id": { "N": "200" },
+  "Code": { "N": "150" }, 
+  "ClassCode": { "S": "TSEZNE" }, 
+  "Name": { "S": "Traffic separation zone" }, 
+  "Severity": { "N": "1" }
+}
+ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
+}
+
+resource "aws_dynamodb_table_item" "maersk_route_danger_categories40" {
+  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
+  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
+
+  item = <<ITEM
+{
+  "Id": { "N": "201" }, 
+  "Code": { "N": "68" }, 
+  "ClassCode": { "S": "ISTZNE" }, 
+  "Name": { "S": "Inshore traffic zone" }, 
+  "Severity": { "N": "2" }
+}
+ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
+}
+
+resource "aws_dynamodb_table_item" "maersk_route_danger_categories41" {
+  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
+  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
+
+  item = <<ITEM
+{ 
+  "Id": { "N": "202" }, 
+  "Code": { "N": "112" }, 
+  "ClassCode": { "S": "RESARE" }, 
+  "Name": { "S": "Restricted area" }, 
+  "Severity": { "N": "4" }
+}
+ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
+}
+
+resource "aws_dynamodb_table_item" "maersk_route_danger_categories42" {
+  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
+  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
+
+  item = <<ITEM
+{
+  "Id": { "N": "203" }, 
+  "Code": { "N": "27" }, 
+  "ClassCode": { "S": "CTNARE" }, 
+  "Name": { "S": "Caution area" }, 
+  "Severity": { "N": "2" }
+}
+ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
+}
+
+resource "aws_dynamodb_table_item" "maersk_route_danger_categories43" {
+  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
+  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
+
+  item = <<ITEM
+{ 
+  "Id": { "N": "204" }, 
+  "Code": { "N": "88" }, 
+  "ClassCode": { "S": "OSPARE" }, 
+  "Name": { "S": "Offshore production area" }, 
+  "Severity": { "N": "4" }
+}
+ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
+}
+
+resource "aws_dynamodb_table_item" "maersk_route_danger_categories44" {
+  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
+  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
+
+  item = <<ITEM
+{ 
+  "Id": { "N": "205" }, 
+  "Code": { "N": "112" }, 
+  "ClassCode": { "S": "RESARE" }, 
+  "Name": { "S": "Restricted area" }, 
+  "Severity": { "N": "4" }
+}
+ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
+}
+
+resource "aws_dynamodb_table_item" "maersk_route_danger_categories45" {
+  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
+  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
+
+  item = <<ITEM
+{ 
+  "Id": { "N": "206" }, 
+  "Code": { "N": "83" }, 
+  "ClassCode": { "S": "MIPARE" }, 
+  "Name": { "S": "Military practice area" }, 
+  "Severity": { "N": "2" }
+}
+ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
+}
+
+resource "aws_dynamodb_table_item" "maersk_route_danger_categories46" {
+  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
+  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
+
+  item = <<ITEM
+{ 
+  "Id": { "N": "207" }, 
+  "Code": { "N": "120" }, 
+  "ClassCode": { "S": "SPLARE" }, 
+  "Name": { "S": "Sea-plane landing area" }, 
+  "Severity": { "N": "4" }
+}
+ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
+}
+
+resource "aws_dynamodb_table_item" "maersk_route_danger_categories47" {
+  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
+  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
+
+  item = <<ITEM
+{ 
+  "Id": { "N": "208" }, 
+  "Code": { "N": "133" }, 
+  "ClassCode": { "S": "SUBTLN" }, 
+  "Name": { "S": "Submarine transit lane" }, 
+  "Severity": { "N": "2" }
+}
+ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
+}
+
+resource "aws_dynamodb_table_item" "maersk_route_danger_categories48" {
+  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
+  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
+
+  item = <<ITEM
+{ 
+  "Id": { "N": "209" }, 
+  "Code": { "N": "4" }, 
+  "ClassCode": { "S": "ACHARE" },
+  "Name": { "S": "Anchorage area" }, 
+  "Severity": { "N": "2" }
+}
+ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
+}
+
+resource "aws_dynamodb_table_item" "maersk_route_danger_categories49" {
+  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
+  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
+
+  item = <<ITEM
+{ 
+  "Id": { "N": "210" }, 
+  "Code": { "N": "82" }, 
+  "ClassCode": { "S": "MARCUL" }, 
+  "Name": { "S": "Marine farm/culture" }, 
+  "Severity": { "N": "2" }
+}
+ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
+}
+
+resource "aws_dynamodb_table_item" "maersk_route_danger_categories50" {
+  table_name = "${data.aws_dynamodb_table.maersk_route_danger_categories.name}"
+  hash_key   = "${data.aws_dynamodb_table.maersk_route_danger_categories.hash_key}"
+
+  item = <<ITEM
+{ 
+  "Id": { "N": "211" }, 
+  "Code": { "N": "112" }, 
+  "ClassCode": { "S": "RESARE" }, 
+  "Name": { "S": "Restricted area" }, 
+  "Severity": { "N": "4" }
+}
+ITEM
+
+  lifecycle {
+    ignore_changes = ["item"]
+  }
+}
