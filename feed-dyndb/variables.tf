@@ -17,3 +17,8 @@ variable "table_tenant_reg_name" {
   type        = "string"
   description = "Table name has to be tenant_registrations"
 }
+
+variable "table_route_danger_categories" {
+  type        = "string"
+  description = "Table name has to be env_maersk_route_danger_categories"
+}
