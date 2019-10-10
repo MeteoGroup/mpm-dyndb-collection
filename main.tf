@@ -151,6 +151,14 @@ module "maersk_maersk_forecastelement_v2" {
   range_key_type = "S"
 
   tags = "${var.tags}"
+
+  global_secondary_index_map = [
+    {
+      name            = "ForecastIdIndex"
+      hash_key        = "ForecastId"
+      projection_type = "ALL"
+    },
+  ]
 }
 
 module "forecast_evidence" {
