@@ -1979,13 +1979,13 @@ resource "aws_dynamodb_table_item" "maersk_route_danger_categories39" {
   "Code": { "N": "150" }, 
   "ClassCode": { "S": "TSEZNE" }, 
   "Name": { "S": "Traffic separation zone" }, 
-  "Severity": { "N": "1" }
+  "Severity": { "N": "2" }
 }
 ITEM
 
-  lifecycle {
-    ignore_changes = ["item"]
-  }
+  #lifecycle {
+  #  ignore_changes = ["item"]
+  #}
 }
 
 resource "aws_dynamodb_table_item" "maersk_route_danger_categories40" {
