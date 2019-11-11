@@ -1983,9 +1983,9 @@ resource "aws_dynamodb_table_item" "maersk_route_danger_categories39" {
 }
 ITEM
 
-  #lifecycle {
-  #  ignore_changes = ["item"]
-  #}
+  lifecycle {
+    ignore_changes = ["item"]
+  }
 }
 
 resource "aws_dynamodb_table_item" "maersk_route_danger_categories40" {
