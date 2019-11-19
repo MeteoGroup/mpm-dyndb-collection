@@ -153,12 +153,10 @@ module "maersk_maersk_forecastelement_v2" {
 }
 
 module "forecast_evidence" {
-  source         = "./modules/dynamodb"
-  name           = "${var.prefix}_forecast_evidence"
-  hash_key       = "TenantId"
-  hash_key_type  = "S"
-  range_key      = "EvidenceName"
-  range_key_type = "S"
+  source        = "./modules/dynamodb"
+  name          = "${var.prefix}_forecast_evidence"
+  hash_key      = "TenantId"
+  hash_key_type = "S"
 
   tags = "${var.tags}"
 }
