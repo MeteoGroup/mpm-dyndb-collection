@@ -22,6 +22,3 @@ variable "table_route_danger_categories" {
   type        = "string"
   description = "Table name has to be env_maersk_route_danger_categories"
 }
-
-
-
