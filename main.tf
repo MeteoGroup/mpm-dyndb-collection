@@ -18,31 +18,30 @@ module "maersk_package_subscriptions" {
   tags = "${var.tags}"
 }
 
-module "maersk_forecastmetadata" {
-  source         = "./modules/dynamodb"
-  name           = "${var.prefix}_${var.project}_forecastmetadata"
-  hash_key       = "Id"
-  hash_key_type  = "S"
-  range_key      = "IssuedDate"
-  range_key_type = "S"
+#module "maersk_forecastmetadata" {
+#  source         = "./modules/dynamodb"
+#  name           = "${var.prefix}_${var.project}_forecastmetadata"
+#  hash_key       = "Id"
+#  hash_key_type  = "S"
+#  range_key      = "IssuedDate"
+#  range_key_type = "S"
+#
+#  tags = "${var.tags}"
+#}
 
-  tags = "${var.tags}"
-}
-
-module "maersk_forecastweatherelement" {
-  source         = "./modules/dynamodb"
-  name           = "${var.prefix}_${var.project}_forecastweatherelement"
-  hash_key       = "Id"
-  hash_key_type  = "N"
-  range_key      = "Name"
-  range_key_type = "S"
-
-  tags = "${var.tags}"
-}
+#module "maersk_forecastweatherelement" {
+#  source         = "./modules/dynamodb"
+#  name           = "${var.prefix}_${var.project}_forecastweatherelement"
+#  hash_key       = "Id"
+#  hash_key_type  = "N"
+#  range_key      = "Name"
+#  range_key_type = "S"
+#
+#  tags = "${var.tags}"
+#}
 
 module "populate_forecastweatherelement" {
   source                          = "./feed-dyndb"
-  table_name                      = "${module.maersk_forecastweatherelement.table_name}"
   table_package_subscr_name       = "${module.maersk_package_subscriptions.table_name}"
   table_tenant_reg_name           = "${module.tenant_registrations.table_name}"
   table_forecastweatherelement_v2 = "${module.maersk_forecastweatherelement_v2.table_name}"
@@ -60,16 +59,16 @@ module "maersk_sender_handle_subscriptions" {
   tags = "${var.tags}"
 }
 
-module "tenants" {
-  source         = "./modules/dynamodb"
-  name           = "${var.prefix}_tenants"
-  hash_key       = "Id"
-  hash_key_type  = "S"
-  range_key      = "Name"
-  range_key_type = "S"
-
-  tags = "${var.tags}"
-}
+#module "tenants" {
+#  source         = "./modules/dynamodb"
+#  name           = "${var.prefix}_tenants"
+#  hash_key       = "Id"
+#  hash_key_type  = "S"
+#  range_key      = "Name"
+#  range_key_type = "S"
+#
+#  tags = "${var.tags}"
+#}
 
 module "maersk_subscriptions_handle_events" {
   source         = "./modules/dynamodb"
