@@ -18,28 +18,6 @@ module "maersk_package_subscriptions" {
   tags = "${var.tags}"
 }
 
-#module "maersk_forecastmetadata" {
-#  source         = "./modules/dynamodb"
-#  name           = "${var.prefix}_${var.project}_forecastmetadata"
-#  hash_key       = "Id"
-#  hash_key_type  = "S"
-#  range_key      = "IssuedDate"
-#  range_key_type = "S"
-#
-#  tags = "${var.tags}"
-#}
-
-#module "maersk_forecastweatherelement" {
-#  source         = "./modules/dynamodb"
-#  name           = "${var.prefix}_${var.project}_forecastweatherelement"
-#  hash_key       = "Id"
-#  hash_key_type  = "N"
-#  range_key      = "Name"
-#  range_key_type = "S"
-#
-#  tags = "${var.tags}"
-#}
-
 module "populate_forecastweatherelement" {
   source                          = "./feed-dyndb"
   table_package_subscr_name       = "${module.maersk_package_subscriptions.table_name}"
@@ -58,17 +36,6 @@ module "maersk_sender_handle_subscriptions" {
 
   tags = "${var.tags}"
 }
-
-#module "tenants" {
-#  source         = "./modules/dynamodb"
-#  name           = "${var.prefix}_tenants"
-#  hash_key       = "Id"
-#  hash_key_type  = "S"
-#  range_key      = "Name"
-#  range_key_type = "S"
-#
-#  tags = "${var.tags}"
-#}
 
 module "maersk_subscriptions_handle_events" {
   source         = "./modules/dynamodb"
