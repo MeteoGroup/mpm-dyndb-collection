@@ -1,8 +1,3 @@
-variable "table_name" {
-  type        = "string"
-  description = "Table name has to be forecastweatherelement"
-}
-
 variable "table_forecastweatherelement_v2" {
   type        = "string"
   description = "Table name has to be forecastweatherelement v2"
