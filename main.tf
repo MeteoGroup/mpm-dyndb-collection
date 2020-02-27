@@ -138,3 +138,11 @@ module "dataset_processing_journal" {
   range_key_type = "S"
   tags           = "${var.tags}"
 }
+
+module "maersk_exclusive_job_trigger_history" {
+  source        = "./modules/dynamodb"
+  name          = "${var.prefix}_${var.project}_exclusive_job_trigger_history"
+  hash_key      = "Id"
+  hash_key_type = "S"
+  tags          = "${var.tags}"
+}
