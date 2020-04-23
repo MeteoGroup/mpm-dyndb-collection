@@ -16,6 +16,14 @@ module "maersk_package_subscriptions" {
   range_key_type = "S"
 
   tags = "${var.tags}"
+
+  global_secondary_index_map = [
+    {
+      name            = "ImoIndex"
+      hash_key        = "Imo"
+      projection_type = "ALL"
+    },
+  ]
 }
 
 module "populate_forecastweatherelement" {
