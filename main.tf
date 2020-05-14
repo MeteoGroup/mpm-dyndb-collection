@@ -16,6 +16,14 @@ module "maersk_package_subscriptions" {
   range_key_type = "S"
 
   tags = "${var.tags}"
+
+  global_secondary_index_map = [
+    {
+      name            = "ImoIndex"
+      hash_key        = "Imo"
+      projection_type = "ALL"
+    },
+  ]
 }
 
 module "populate_forecastweatherelement" {
@@ -145,4 +153,23 @@ module "maersk_exclusive_job_trigger_history" {
   hash_key      = "Id"
   hash_key_type = "S"
   tags          = "${var.tags}"
+}
+
+module "forecast_overrides" {
+  source         = "./modules/dynamodb"
+  name           = "${var.prefix}_${var.project}_forecast_overrides"
+  hash_key       = "Id"
+  hash_key_type  = "S"
+  range_key      = "ForecastId"
+  range_key_type = "S"
+
+  tags = "${var.tags}"
+
+  global_secondary_index_map = [
+    {
+      name            = "ForecastIdIndex"
+      hash_key        = "ForecastId"
+      projection_type = "ALL"
+    },
+  ]
 }
